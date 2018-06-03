@@ -1,0 +1,54 @@
+li {
+	list-style: none;
+	line-height: 1.4em;
+}
+li::before {
+	content: '—';
+	padding-right: 0.3em;
+}
+#table-faq {
+	font-size: 1.2em;
+}
+
+div.faq-div {
+	font-size: 1.2em;
+	width: 49%;
+}
+div.faq-div p.faq-title {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+div.faq-div p.faq-text {
+	font-weight: bold;
+	margin-top: 0 !important;
+}
+
+
+div.faq-div-left {
+	width: inherit;
+}
+div.faq-div-right {
+	width: inherit;
+}
+@media (max-width: 989px) {
+	div.faq-div-left {
+		width: inherit;
+	}
+}
+@media (min-width: 990px) {
+	div.faq-div-left {
+		float: left;
+		width: 49%;
+	}
+}
+@media (max-width: 989px) {
+	div.faq-div-right {
+		width: inherit;
+	}
+}
+@media (min-width: 990px) {
+	div.faq-div-right {
+		float: right;
+		width: 49%;
+	}
+}

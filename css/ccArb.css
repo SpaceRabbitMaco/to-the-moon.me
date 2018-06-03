@@ -1,0 +1,87 @@
+.elem-hidden {
+	visibility: hidden;
+}
+
+div.cc-main-div-conteiner {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+div.cc-div-conteiner {
+	font-size: 1.2em;
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-bottom: 0.3em;
+	background-color: rgba(158, 158, 158, 0.20);
+	padding: 0.5em;
+	vertical-align: top;
+	max-width: 35%;
+	border-radius: 0.3em;
+}
+
+div.cc-div-conteiner p {
+	margin: 0;
+}
+
+div div.cc-div-conteiner p span {
+	display: inline-block;
+}
+
+span.cc-usd-price::before {
+	content: '$';
+}
+
+.symbol {
+	font-weight: bold;
+}
+
+span.cc-1h-change {
+	font-weight: bold;
+}
+
+
+div.cc-div-conteiner span {
+	margin-bottom: 0.4em;
+}
+
+div.cc-div-calc {
+	text-align: center;
+	width: 25%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.label-calc {
+	display: block;
+    margin-bottom: 1em;
+    text-align: right;
+}
+
+/*.input-calc {
+	height: 2em;
+    border: 2px solid rgba(63, 81, 181, 0.50);
+    border-radius: 0.5em;
+    outline: none;
+	text-align: center;
+}*/
+
+#l-BTC::before {
+	content: "BTC";
+	margin-right: 1em;
+}
+
+#l-ETH::before {
+	content: "ETH";
+	margin-right: 1em;
+}
+
+#l-LTC::before {
+	content: "LTC";
+	margin-right: 1em;
+}
+
+#l-DOGE::before {
+	content: "DOGE";
+	margin-right: 1em;
+}

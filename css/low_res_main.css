@@ -1,0 +1,236 @@
+* {
+	font-family: 'Encode Sans', sans-serif;
+	-webkit-box-sizing: inherit;
+	box-sizing: border-box;
+}
+
+/* хром, сафари */
+*::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+* { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+* { overflow: -moz-scrollbars-none; }
+
+.text-center {
+	text-align: center;
+}
+
+.same-markets {
+	background: rgba(0, 188, 212, 0.15);
+}
+
+.price-low {
+	background: rgba(139, 195, 74, 0.3);
+	border-bottom: 2px solid #8BC34A;
+}
+
+.price-hi {
+	background: rgba(255, 152, 0, 0.2);
+	border-bottom: 2px solid rgba(255, 152, 0, 0.7);
+}
+
+div.margin-top-0 {
+	margin-top: 0 !important;
+}
+
+#wrap {
+	/*min-height: 100%;*/
+	padding-bottom: 7em;
+	box-sizing: border-box;
+}
+
+#price-drop-timestamp {
+	display: inline-block;
+	font-style: italic;
+	color: rgba(158, 158, 158, 0.4);
+	font-weight: bold;
+	float: right;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+    min-height: 100%;
+	background: gray;
+	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark-triangles.png);
+	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png);
+	background-image: url('../img/ep_naturalblack.png');
+}
+
+div#menu {
+	background: #FFF;
+	padding:0.5em;
+	margin-bottom: 5em;
+	border-radius: 0 0 2em 2em;
+}
+
+div#menu nav span a {
+	font-family: 'Merriweather', serif;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+	color: rgba(63, 81, 181, 0.26);
+}
+
+div#menu nav span a.nav-a-selected {
+	color: rgba(63, 81, 181, 0.77)
+}
+
+div#menu nav span a:hover {
+	color: rgba(63, 81, 181, 0.77);
+}
+
+
+div#menu nav {
+	margin: 0 auto;
+	width: 50%;
+}
+
+div#menu nav span{
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+}
+
+h2 {
+	color: rgba(63, 81, 181, 0.9) !important;
+}
+
+div.base-div {
+    margin: 0 auto;
+    margin-top: 2em;
+    max-width: 1200px;
+    padding: 2em;
+    padding-top: 0.5em;
+    background: #fff;
+    border-radius: 0.5em;
+}
+
+div.base-div span {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+table.base-table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 100%;
+}
+
+table.base-table tr{
+    border-bottom: 2px solid #dce1fd;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+}
+
+table.base-table tr:first-child{
+    border-bottom: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+table.base-table tr:hover{
+	background: #dce1fd;
+}
+
+table.base-table th{
+background: rgba(115, 135, 231, 0.62);
+}
+
+table.base-table td, table.base-table th {
+	padding: 0.2em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+td.td-pos{
+	width: 2em;
+}
+
+td.td-pos, td.td-abr{
+	text-align: center;
+}
+
+td.td-market-cup::before, td.td-volume-24::before{
+	content: "$ ";
+}
+
+table.base-table td.td-name div {
+	margin-right: 0.4em;
+}
+
+table.base-table tr a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table.base-table tr a:hover, table.base-table tr a:active {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* td.td-1h-change::after, td.td-24h-change::after, td.td-7d-change::after{
+	content: " % ";
+} */
+
+
+.currency-logo-sprite {
+	float: left;
+}
+
+
+div#bottom {
+	margin: 0 auto;
+	background: #FFF;
+	padding: 0.5em;
+	margin-top: 5em;
+	border-radius: 5em 5em 0 0;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+div#menu {
+-webkit-box-shadow: 0px 0px 128px -10px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 128px -10px rgba(255,255,255,1);
+box-shadow: 0px 0px 128px -10px rgba(255,255,255,1);
+}
+
+table#table-1_hour th.th-1h, table#table-24_hours th.th-24h, table#table-7_days th.th-7d {
+	background: rgba(63, 81, 181, 0.58);
+}
+
+table#table-1_hour th.th-1h, table#table-24_hours th.th-24h, table#table-7_days th.th-7d {
+	background: rgba(63, 81, 181, 0.58);
+}
+
+table#table-1_hour td.td-1h-change,  table#table-24_hours td.td-24h-change, table#table-7_days td.td-7d-change, .td-arb-ratio {
+	background-color: rgba(215, 44, 44, 0.1);
+    background: rgba(215, 44, 44, 0.1);
+    border-bottom: 2px solid #d2b4b4;
+}
+
+/* div#bottom, div.base-div {
+	-webkit-box-shadow: 0px 0px 128px -40px rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 128px -40px rgba(255,255,255,1);
+	box-shadow: 0px 0px 128px -40px rgba(255,255,255,1); */
+
+div#bottom a {
+	color: rgba(63, 81, 181, 0.9);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#bottom a:hover {
+	color: rgba(156, 39, 176, 0.90);
+}
+
+#bottom-CMC {
+	padding-right: 1.6em;
+}

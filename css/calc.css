@@ -1,0 +1,104 @@
+.cc-div-conteiner p span.last {
+	margin-bottom: 0 !important;
+}
+
+.starter-template {
+	padding: 3rem 1.5rem;
+	text-align: center;
+}
+
+.starter-template h1 {
+	margin-bottom: 0.8em;
+}
+
+.input-cc-title {
+	background-color: rgba(33, 150, 243, 0.18);
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	margin-bottom: 0.0em !important;
+	width: 60px !important;
+}
+
+.input-fiat-title {
+	background-color: rgba(139, 195, 74, 0.3);
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	margin-bottom: 0.0em !important;
+}
+
+.title-cursor {
+	cursor: pointer;
+}
+
+h2.test {
+	width:100%;
+	text-align:center;
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.30);
+	line-height:0.1em;
+	margin:10px 0 20px;
+}
+h2 span.test-span {
+	background:#fff;
+	padding:0 10px;
+	vertical-align: top;
+	font-size: initial;
+	color: rgba(0, 0, 0, 0.55);
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	display: inline !important;
+	font-weight: bold;
+}
+
+.marg-bot-0.5em {
+	margin-bottom: 0.5em;
+}
+.marg-bot-1em {
+	margin-bottom: 1em;
+}
+.marg-bot-2em {
+	margin-bottom: 2em;
+}
+.marg-bot-4em {
+	margin-bottom: 4em;
+}
+
+
+h1.one {
+	position: relative;
+	margin-top: 20px;
+}
+
+h1.one {
+	margin-top: 0;
+	margin-bottom: 0.5em !important;
+}
+
+h1.one:before {
+	content: "";
+	display: block;
+	border-top: solid 0.4px rgba(0, 0, 0, 0.55);
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+}
+
+h1.one span {
+	background: #fff;
+	padding: 0 10px;
+	position: relative;
+	z-index: 5;
+	font-size: 0.65em;
+	color: rgba(0, 0, 0, 0.55);
+	top: -2px;
+}

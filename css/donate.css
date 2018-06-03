@@ -1,0 +1,60 @@
+li {
+	font-size: 16px;
+	list-style: none;
+	margin-bottom: 0.9em;
+	word-break: break-all;
+}
+b {
+	margin-right: 0.3em;
+	margin-left: 0.3em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 1em
+}
+.icons-donate {
+	float: left;
+}
+.donate-p {
+	margin-bottom: 1em;
+	text-align: center;
+}
+.donate-p span {
+	margin-bottom: 0.5em;
+	display: inline-block;
+	font-size: 1.2em;
+}
+.donate-BTC::before {
+	content: 'BTC';
+}
+.donate-ETH::before {
+	content: 'ETH';
+}
+.donate-LTC::before {
+	content: 'LTC';
+}
+.donate-DASH::before {
+	content: 'DASH';
+}
+.donate-XMR::before {
+	content: 'XMR';
+}
+.donate-ETC::before {
+	content: 'ETC';
+}
+.donate-ZEC::before {
+	content: 'ZEC';
+}
+.donate-DOGE::before {
+	content: 'DOGE';
+}
+.donate-VTC::before {
+	content: 'VTC';
+}
+.donate-FTC::before {
+	content: 'FTC';
+}
+.donate-UFO::before {
+	content: 'UFO';
+}
