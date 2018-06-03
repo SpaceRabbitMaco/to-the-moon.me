@@ -19,7 +19,7 @@
 	-webkit-user-select: none;
 	-o-user-select: none;
 	margin-bottom: 0.0em !important;
-	width: 60px !important;
+	width: 65px !important;
 }
 
 .input-fiat-title {
@@ -30,6 +30,7 @@
 	-webkit-user-select: none;
 	-o-user-select: none;
 	margin-bottom: 0.0em !important;
+	width: 65px !important;
 }
 
 .title-cursor {
