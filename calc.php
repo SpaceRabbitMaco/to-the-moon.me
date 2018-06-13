@@ -15,6 +15,7 @@
 		<meta property="og:description" content="Cryptocurrency converter calculator tool, helps to convert popular cryptocurrency, also a price tracker" />
 		<!-- ___META___(END)___ -->
 
+
 		<!-- ___CSS___(START)___ -->
 		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 		<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css'>
@@ -259,7 +260,7 @@
 						 </div>
 					    </div><!-- div-row -->
 
-					    <div class="row"><!-- div-row -->
+					    <div class="row marg-bot-2em"><!-- div-row -->
 						    <div class="col-lg-3">
 							   <div class="input-group">
 								   <span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Hong Kong dollar">HKD</span>
@@ -285,6 +286,55 @@
 							</div>
 						</div>
 					   </div><!-- div-row -->
+
+					   <h1 class="one"><span>Profit Calc</span></h1>
+
+
+					  <div class="row"><!-- div-row -->
+						  <div class="col-lg-6 marg-bot-1em">
+							 <div class="input-group">
+								<select class="" name="" id='new-select-cc-was'></select>
+
+								<span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Hong Kong dollar">Was</span>
+
+								 <input id="new-btc-was" type="text" class="form-control cc-calc-input">
+							 </div>
+						 </div>
+						 <div class="col-lg-6">
+							<div class="input-group">
+								<select class="" data-live-search="" name="" id='new-select-cc-now'></select>
+
+							     <span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Pound sterling">Now</span>
+
+							     <input id="new-btc-now" type="text" class="form-control cc-calc-input">
+							</div>
+						</div>
+					</div><!-- div-row -->
+
+					<div class="row"><!-- div-row -->
+						<div class="col-lg-4">
+						     <div class="input-group">
+							      <span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Hong Kong dollar">Sat.</span>
+
+							     <input id="new-btc-profit-sat" type="text" class="form-control cc-calc-input">
+						     </div>
+					     </div>
+					     <div class="col-lg-4">
+						    <div class="input-group">
+							<span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Pound sterling">%</span>
+
+							<input id="new-btc-profit-prnt" type="text" class="form-control cc-calc-input">
+						    </div>
+					    </div>
+
+					    <div class="col-lg-4">
+						   <div class="input-group">
+						     <span class="input-group-addon input-fiat-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Pound sterling">X</span>
+
+						     <input id="new-btc-profit-x" type="text" class="form-control cc-calc-input">
+						   </div>
+					   </div>
+				    </div><!-- div-row -->
 
 					</div><!-- starter-template -->
 
@@ -314,5 +364,90 @@
 	})
 
 	footerToBottom();
+
+</script>
+
+<script>
+var CC_a, CC_b;
+			var CC_a_select = document.getElementById('new-select-cc-was');
+			var CC_b_select = document.getElementById('new-select-cc-now');
+			var BTC_was = document.getElementById('new-btc-was');
+			var BTC_now = document.getElementById('new-btc-now');
+			var BTC_profit = document.getElementById('new-btc-profit-sat');
+			var BTC_profit_prnt = document.getElementById('new-btc-profit-prnt');
+			var BTC_profit_x = document.getElementById('new-btc-profit-x');
+			var CC_list;
+			var CC_names_list = [];
+
+			var printSelect = function(cc_names, select_id) {
+				var target_element = document.getElementById(select_id);
+				target_element = $(target_element);
+				$.each(cc_names, function(index, value) {
+					var id = value.split('###')[1];
+					value = value.split('###')[0];
+					target_element.append('<option value="'+id+'">'+value+'</option>');
+				})
+
+			}
+
+			var init = function(data) {
+				data = $(data);
+				$.each(data, function(index, value) {
+					if (value.name.length > 16) { value.name = value.name.substr(0, 16) + '...'; }
+					CC_names_list.push(value.name + ' (' + value.symbol +')###' + value.id);
+				})
+
+				printSelect(CC_names_list, 'new-select-cc-was');
+				printSelect(CC_names_list, 'new-select-cc-now');
+			}
+
+			var calcProfit = function() {
+				var a_v = BTC_was.value;
+				var b_v = BTC_now.value;
+				var a_sat = a_v * CC_a.price_btc;
+				var b_sat = b_v * CC_b.price_btc;
+				console.log(a_sat, b_sat);
+
+				BTC_profit.value = (b_sat - a_sat).toFixed(8);
+				BTC_profit_prnt.value = (((b_sat /a_sat) * 100) - 100).toFixed(1);
+				BTC_profit_x.value = (b_sat / a_sat).toFixed(2);
+			}
+
+			var initModule = function() {
+				$.ajax({
+					url: 'https://api.coinmarketcap.com/v1/ticker/?&limit=0',
+					dataType : "json",
+					success: function (data, textStatus) {
+						CC_list = $(data);
+						CC_a = CC_list[0];
+						CC_b = CC_list[0];
+						init(CC_list);
+
+						BTC_was.oninput = function() { calcProfit(); }
+						BTC_now.oninput = function() { calcProfit(); }
+					}
+				})
+			}
+
+			var setCC = function(cc_id, type) {
+				$.each(CC_list, function (index, value) {
+					if (value.id == cc_id && type == 'a') { CC_a = value; }
+					if (value.id == cc_id && type == 'b') { CC_b = value; }
+				} )
+				calcProfit();
+			}
+
+			$( function() { initModule(); });
+
+
+			(function($) {
+				BTC_was.oninput = function() { calcProfit(); }
+				BTC_now.oninput = function() { calcProfit(); }
+
+
+			} );
+
+			CC_a_select.onchange = function () { setCC(CC_a_select.value, 'a'); }
+			CC_b_select.onchange = function () { setCC(CC_b_select.value, 'b'); }
 
 </script>

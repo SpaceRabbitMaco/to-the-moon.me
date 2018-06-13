@@ -181,6 +181,11 @@ function getData($url) {
 
 		var $lastUpdate = getDateLastUpdate($ccObj);
 
+		if ($ccObj.id == 'uniform-fiscal-object') {
+			$ccObj.price_usd = +$ccObj.price_usd;
+			$ccObj.price_usd = $ccObj.price_usd.toFixed(5);
+		}
+
 		$('#' + $ccObj.id).text($ccObj.price_usd);
 		$('#' + $ccObj.id + '-last-update').text($lastUpdate);
 		$('#' + $ccObj.id + '-1h-change').text($ccObj.percent_change_1h + '%');
@@ -350,3 +355,57 @@ function appINIT() {
 		calculateAndSet((1/$BTC_JPY[0].price_jpy), $imputJPY.value, 'JPY');
 	};
 }
+
+
+// NEW FUNCTIONS AND NEW VARS FOR PROFIT CALC
+// var BTC_was = document.getElementById('new-btc-was');
+// var BTC_now = document.getElementById('new-btc-now');
+// var BTC_profit = document.getElementById('new-btc-profit-sat');
+// var BTC_profit_prnt = document.getElementById('new-btc-profit-prnt');
+// var BTC_profit_x = document.getElementById('new-btc-profit-x');
+// var CC_list;
+// var CC_names_list = [];
+//
+// var printSelect = function(cc_names, select_id) {
+// 	var target_element = document.getElementById(select_id);
+// 	target_element = $(target_element);
+// 	$.each(cc_names, function(index, value) {
+// 		var id = value.split('###')[1];
+// 		value = value.split('###')[0];
+// 		target_element.append('<option value="'+id+'">'+value+'</option>');
+// 	});
+// };
+//
+// var init = function(data) {
+// 	data = $(data);
+// 	$.each(data, function(index, value) {
+// 		if (value.name.length > 16) { value.name = value.name.substr(0, 16) + '...'; }
+// 		CC_names_list.push(value.name + ' (' + value.symbol +')###' + value.id);
+// 	});
+// 	printSelect(CC_names_list, 'select-cc-was');
+// 	printSelect(CC_names_list, 'select-cc-now');
+// };
+//
+// var calcProfit = function() {
+// 	if ( BTC_was.value == '' || BTC_now.value == '') { return; }
+//
+// 	BTC_profit.value = (BTC_now.value - BTC_was.value).toFixed(8);
+// 	BTC_profit_prnt.value = (((BTC_now.value /BTC_was.value) * 100) - 100).toFixed(1);
+// 	BTC_profit_x.value = (BTC_now.value /BTC_was.value).toFixed(1);
+// };
+//
+// var initF = function() {
+// 	$.ajax({
+// 		url: 'https://api.coinmarketcap.com/v1/ticker/?&limit=0',
+// 		dataType : "json",
+// 		success: function (data, textStatus) {
+// 			CC_list = $(data);
+// 			init(CC_list);
+// 		}
+// 	});
+// };
+//
+// $( function() { initF(); });
+//
+// BTC_was.oninput = function() { calcProfit(); };
+// BTC_now.oninput = function() { calcProfit(); };
