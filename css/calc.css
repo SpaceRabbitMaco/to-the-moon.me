@@ -33,6 +33,17 @@
 	width: 65px !important;
 }
 
+.input-profit-title {
+	background-color: rgba(240, 173, 78, 0.3);
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	margin-bottom: 0.0em !important;
+	width: 65px !important;
+}
+
 .title-cursor {
 	cursor: pointer;
 }

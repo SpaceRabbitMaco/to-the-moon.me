@@ -18,26 +18,37 @@
 
 		<!-- ___CSS___(START)___ -->
 		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-		<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css'>
-		<link href="font-awesome/css/font-awesome.css" rel='stylesheet' type='text/css'>
-		<link href="css/main.css" rel='stylesheet' type='text/css'>
-		<link href="css/calc.css" rel='stylesheet' type='text/css'>
-		<link href="css/ccArb.css" rel='stylesheet' type='text/css'>
-		<link href="css/all_views_all.css" rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 		<!-- ___CSS___(END)___ -->
 
 		<!-- ___JS___(START)___ -->
-		<script src="js/jquery-3.2.1.min.js"></script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
+
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
+
 		<script src="js/calc.js"></script>
+		<script src="js/main.js"></script>
 		<script src="js/send_mail.js"></script>
 		<!-- ___JS___(END)___ -->
 
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<link href="css/calc.css" rel='stylesheet' type='text/css'>
 		<!-- Yandex.Metrika counter -->
 		<!-- <script type="text/javascript" >
 		    (function (d, w, c) {
@@ -105,7 +116,7 @@
 								<span class='cc-1h-change' id='ethereum-1h-change'>None</span>
 							</p>
 							<p>
-								<span><strong>Sat</strong>: </span>
+								<span>ETH/BTC: </span>
 								<span id='ethereum-BTC'>None</span>
 							</p>
 							<p>
@@ -120,7 +131,7 @@
 								<span class='cc-1h-change' id='litecoin-1h-change'>None</span>
 							</p>
 							<p>
-								<span><strong>Sat</strong>: </span>
+								<span>LTC/BTC: </span>
 								<span id='litecoin-BTC'>None</span>
 							</p>
 							<p>
@@ -135,7 +146,7 @@
 								<span class='cc-1h-change' id='uniform-fiscal-object-1h-change'>None</span>
 							</p>
 							<p>
-								<span><strong>Sat</strong>: </span>
+								<span>UFO/BTC: </span>
 								<span id='uniform-fiscal-object-BTC'>None</span>
 							</p>
 							<p>
@@ -293,16 +304,19 @@
 					  <div class="row"><!-- div-row -->
 						  <div class="col-lg-6 marg-bot-1em">
 							 <div class="input-group">
-								<select class="" name="" id='new-select-cc-was'></select>
+								<select class="selectpicker" data-live-search="true" name="" id='new-select-cc-was'></select>
 
-								<span class="input-group-addon input-profit-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="">Was</span>
+								<span class="input-group-addon input-profit-title title-cursor" data-toggle="tooltip" data-width="50px" data-placement="bottom" title="" data-original-title="">Was</span>
 
 								 <input id="new-btc-was" type="text" class="form-control cc-calc-input">
 							 </div>
 						 </div>
 						 <div class="col-lg-6">
 							<div class="input-group">
-								<select class="" data-live-search="" name="" id='new-select-cc-now'></select>
+								<select class="selectpicker" data-live-search="true" name=""
+								 id='new-select-cc-now'>
+								 <option value="">1234124134</option>
+							</select>
 
 							     <span class="input-group-addon input-profit-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="">Now</span>
 
@@ -353,26 +367,21 @@
 </html>
 
 <script type="text/javascript">
-
-	$(function() {
-		setTimeout(appINIT, 300); // app init
-		var timerId1 = setInterval(appINIT, 300000); // app reload
-	});
-
+	setTimeout(appINIT, 300); // app init
+	var timerId1 = setInterval(appINIT, 300000); // app reload
 
 	//setTimeout(updateFiats, 500); // fiat init
 	//var timerId2 = setInterval(updateFiats, 300000); // fiat reload
 
 	$(function () {
-	  $('[data-toggle="tooltip"]').tooltip();
-	  footerToBottom();
+	  $('[data-toggle="tooltip"]').tooltip()
 	})
 
-
+	footerToBottom();
 
 </script>
 
-<!-- <script>
+<script>
 var CC_a, CC_b;
 			var CC_a_select = document.getElementById('new-select-cc-was');
 			var CC_b_select = document.getElementById('new-select-cc-now');
@@ -454,4 +463,5 @@ var CC_a, CC_b;
 
 			CC_a_select.onchange = function () { setCC(CC_a_select.value, 'a'); }
 			CC_b_select.onchange = function () { setCC(CC_b_select.value, 'b'); }
-</script> -->
+
+</script>

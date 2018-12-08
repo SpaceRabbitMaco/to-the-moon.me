@@ -1,6 +1,3 @@
-<?php	$ccMap = file('cc_map.json'); ?>
-<script>var ccMap = <?php echo $ccMap[0];?></script>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,6 +31,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/priceDrop.js"></script>
+		<script src="js/main.js"></script>
 		<script src="js/send_mail.js"></script>
 		<!-- ___JS___(END)___ -->
 
@@ -106,5 +104,16 @@
 			◑
 			<span id='bottom-CMC'>All data from <a href='https://coinmarketcap.com/' target='_blank'>CMC</a></span>
 		</div>
+
+		<script type="text/javascript">
+			$(function(){
+				startPriceDrop(true); // initialising
+
+				var $timerID = setInterval(function() { // set interval for information refresh
+			      	startPriceDrop(false);
+				}, 300000);
+			});
+		</script>
+
 	</body>
 </html>

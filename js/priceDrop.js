@@ -133,32 +133,71 @@ function $marketAnalysis($allCC, $1h, $24h, $7d) { // start
       }
 } // end
 
-function $drawTable($arr, $type, $ccTotalCount) { // start
+function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
       var $title, $tableID, $data;
       if ($type == 'cc1h') {$title = '1 hour'; $tableID = 'table-1_hour'; $data = '<div id="price-drop-timestamp">time</div>';}
       if ($type == 'cc24h') {$title = '24 hours'; $tableID = 'table-24_hours'; $data = '';}
       if ($type == 'cc1d') {$title = '7 days'; $tableID = 'table-7_days'; $data = '';}
       var $htmlData = $data;
 
-      $htmlData = $htmlData + '<h2>' + $title + ' price change</h2><span><u>Coins</u>: ' + $arr.length + ' | <u>Total coins</u>: ' + $ccTotalCount + '</span><table class="base-table" id="' + $tableID + '"><tr><th class="table-th1">#</th><th class="table-th2">Name</th><th class="table-th3">Symbol</th><th class="table-th4">Market Cap</th><th class="table-th5">Price ($)</th><th class="table-th6">Volume (24h)</th><th class="th-1h table-th7">% 1h</th><th class="th-24h table-th8">% 24h</th><th class="th-7d table-th9">% 7d</th></tr>';
+      $htmlData = $htmlData + '<h2>' + $title + ' price change</h2><span><u>Coins</u>: ' + $arr.length + ' | <u>Total coins</u>: ' + $ccTotalCount + '</span><table class="base-table" id="' + $tableID + '"><tr><th class="table-th1">#</th><th class="table-th2">Name</th><th class="table-th3">Symbol</th><th class="table-th5">Price (sat.)</th><th class="table-th5">Price ($)</th><th class="table-th6">Volume (24h)</th><th class="th-1h table-th7">% 1h</th><th class="th-24h table-th8">% 24h</th><th class="th-7d table-th9">% 7d</th></tr>';
 
       for (var i = 0; i < $arr.length; i++) {
-            var ccID = $arr[i].id, ccMapClass = 'NON-IN-MAP';
-            if (ccMap[ccID]) { ccMapClass = ccMap[ccID][1]; }
+				var rank =  $arr[i].cmc_rank;
+				var id =  $arr[i].id;
+				var name =  $arr[i].name;
+				var slug = $arr[i].slug;
 
-            $htmlData = $htmlData + '<tr><td class="td-pos table-td1">' + $arr[i].rank + '</td><td class="td-name table-td2"><div class="s-s-' + $arr[i].id + ' ' + ccMapClass + ' currency-logo-sprite"></div><a target="_blank" href="https://coinmarketcap.com/currencies/' + $arr[i].id + '/">' + $arr[i].name + '</a></td><td class="td-abr table-td3">' + $arr[i].symbol + '</td><td class="td-market-cup table-td4">' +$arr[i].market_cap_usd + '</td><td class="td-price table-td5"><a target="_blank" href="https://coinmarketcap.com/assets/'  + $arr[i].id + '/#markets">' + $arr[i].price_usd + '</a></td><td class="td-volume-24 table-td6">' + $arr[i]['24h_volume_usd'] + '</td><td class="td-1h-change table-td7">' + $arr[i].percent_change_1h + '</td><td class="td-24h-change table-td8">' + $arr[i].percent_change_24h + '</td><td class="td-7d-change table-td9">' + $arr[i].percent_change_7d + '</td></tr>';
+				var name = $arr[i].name;
+				if (name.length > 20) {
+					name = name.substr(0,20) + '...';
+				}
+
+				var symbol = $arr[i].symbol;
+				var usdPrice = $arr[i].quote.USD.price.toFixed(4);
+				var eqvBTC = usdPrice / $BTC_PRICE;
+			 	eqvBTC = eqvBTC.toFixed(8);
+				eqvBTC = eqvBTC.replace(/\B(?=(\d{4})+(?!\d))/g, " ");
+
+				var change1h = $arr[i].quote.USD.percent_change_1h.toFixed(1);
+				var change24h = $arr[i].quote.USD.percent_change_24h.toFixed(1);;
+				var change7d = $arr[i].quote.USD.percent_change_7d.toFixed(1);;
+				var volume_24h = $arr[i].quote.USD.volume_24h.toFixed(0);
+				volume_24h = volume_24h.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+            $htmlData = $htmlData+'<tr><td class="td-pos table-td1">'+rank+'</td><td class="td-name table-td2"><div class="s-s-'+id+' currency-logo-sprite"></div><a target="_blank" href="https://coinmarketcap.com/currencies/'+slug+'/">'+name+'</a></td><td class="td-abr table-td3">'+symbol+'</td><td class="td-sat table-td1">'+eqvBTC+'</td><td class="td-price table-td5"><a target="_blank" href="https://coinmarketcap.com/assets/'+slug+'/#markets">'+usdPrice+'</a></td><td class="td-volume-24 table-td6">'+volume_24h+'<td class="td-1h-change table-td7">'+change1h+'</td><td class="td-24h-change table-td8">'+change24h+'</td><td class="td-7d-change table-td9">'+change7d+'</td></tr>';
       }
-
       $htmlData = $htmlData + '</tabde>';
       $('#main-div-cc-' + $type).html($htmlData);
-
 } // end
 
+function	startPriceDrop(isFirst) {
+	$(function() {
+		var ALL_DATA = getJSONData('../loaded_data/all_data.json');
+
+		var TIME_DATA_RECIVED = ALL_DATA['status'].timestamp;
+		TIME_DATA_RECIVED = TIME_DATA_RECIVED.split('.')[0];
+		TIME_DATA_RECIVED = TIME_DATA_RECIVED.split('T').join(' ');
+
+		var BTC_PRICE = ALL_DATA['data'][0].quote.USD.price.toFixed(4);
+		var ALL_COINS_COUNT = ALL_DATA['data'].length;
+		ALL_DATA = '';
+
+		var CHANGE_1H = getJSONData('../loaded_data/change1h.json');
+		var CHANGE_24H = getJSONData('../loaded_data/change24h.json');
+		var CHANGE_7D = getJSONData('../loaded_data/change7d.json');
+
+		$drawTable(CHANGE_1H, 'cc1h', ALL_COINS_COUNT, BTC_PRICE);
+		$drawTable(CHANGE_24H, 'cc24h', ALL_COINS_COUNT, BTC_PRICE);
+		$drawTable(CHANGE_7D, 'cc1d', ALL_COINS_COUNT, BTC_PRICE);
+
+		$('#price-drop-timestamp').html('Last update at: ' +TIME_DATA_RECIVED);
+
+		if (isFirst) {
+			console.log('First Launch');
+		}	else {
+			console.log('Reload');
+		}
+});
+}
 // ===___FUNCTIONS_END___===
-
-
-$getData('true'); // initialising
-
-var $timerID = setInterval(function() { // set interval for information refresh
-      $getData('');
-}, 300000);
