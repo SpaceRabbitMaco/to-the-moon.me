@@ -2,8 +2,8 @@
 // ---- [ MAIN MODULE VARs ] ----
 // ------------------------------------------
 var ALL_RATES = {};
-var FIAT_RATES = getJSONData('../loaded_data/usd_rates.json');
-var TOP_CC = getJSONData('../loaded_data/topCC.json');
+var FIAT_RATES = getJSONData('../saved_data/usd_rates.json');
+var TOP_CC = getJSONData('../saved_data/topCC.json');
 // var ALL_DATA = getJSONData('../loaded_data/all_data.json');
 // ------------------------------------------
 
@@ -54,7 +54,7 @@ function calcCoinEqv(inputBTCeqv, coin) { // Calculates BTC eqv. for output
       case 'LTC':
          return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdLTC).toFixed(8);
       case 'UFO':
-         return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdUFO).toFixed(8);
+         return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdUFO).toFixed(2);
       case 'BCH':
          return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdBCH).toFixed(8);
       case 'XMR':
@@ -227,9 +227,9 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
             case 'input-LTC':
                $('#input-LTC')[0].value = calcCoinEqv($CC_to_BTCeqv, 'LTC');
                break;
-               //case 'input-UFO':  !!!!!!!!!! NEED TO FIX IN PROD !!!!!!!!!!!
-               //$('#input-UFO')[0].value = calcCoinEqv($CC_to_BTCeqv, 'UFO');
-               //break;
+            case 'input-UFO':
+            	$('#input-UFO')[0].value = calcCoinEqv($CC_to_BTCeqv, 'UFO');
+            	break;
             case 'input-BCH':
                $('#input-BCH')[0].value = calcCoinEqv($CC_to_BTCeqv, 'BCH');
                break;
@@ -286,8 +286,8 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
 }
 
 function appINIT() {
-	FIAT_RATES = getJSONData('../loaded_data/usd_rates.json');
-	TOP_CC = getJSONData('../loaded_data/topCC.json');
+	FIAT_RATES = getJSONData('../saved_data/usd_rates.json');
+	TOP_CC = getJSONData('../saved_data/topCC.json');
 
 	getAllUSDRates(TOP_CC);
 	updateTopCardsCC(TOP_CC);
