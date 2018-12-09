@@ -159,10 +159,17 @@ function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
 				eqvBTC = eqvBTC.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
 				var change1h = $arr[i].quote.USD.percent_change_1h.toFixed(1);
-				var change24h = $arr[i].quote.USD.percent_change_24h.toFixed(1);;
-				var change7d = $arr[i].quote.USD.percent_change_7d.toFixed(1);;
-				var volume_24h = $arr[i].quote.USD.volume_24h.toFixed(0);
-				volume_24h = volume_24h.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+				var change24h = $arr[i].quote.USD.percent_change_24h.toFixed(1);
+				var change7d = $arr[i].quote.USD.percent_change_7d.toFixed(1);
+				var volume_24h;
+
+				if ($arr[i].quote.USD.volume_24h === null) {
+					volume_24h = $arr[i].quote.USD.volume_24h;
+				} else {
+					volume_24h = $arr[i].quote.USD.volume_24h.toFixed(0);
+					volume_24h = volume_24h.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+				}
+				
 
 				$htmlData = $htmlData+'<tr><td class="td-pos table-td1">'+rank+'</td><td class="td-name table-td2"><img src="https://s2.coinmarketcap.com/static/img/coins/16x16/'+id+'.png"  alt="Bitcoin" height="16" width="16"><a target="_blank" href="https://coinmarketcap.com/currencies/'+slug+'/">'+name+'</a></td><td class="td-abr table-td3">'+symbol+'</td><td class="td-sat table-td1">'+eqvBTC+'</td><td class="td-price table-td5"><a target="_blank" href="https://coinmarketcap.com/assets/'+slug+'/#markets">'+usdPrice+'</a></td><td class="td-volume-24 table-td6">'+volume_24h+'<td class="td-1h-change table-td7">'+change1h+'</td><td class="td-24h-change table-td8">'+change24h+'</td><td class="td-7d-change table-td9">'+change7d+'</td></tr>';
       }
