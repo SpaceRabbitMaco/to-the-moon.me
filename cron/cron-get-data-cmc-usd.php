@@ -40,7 +40,7 @@ function priceDropAlalytics($arr) {
 function getAllDataFromCMC() {
 	$ch = curl_init();
 
-	curl_setopt($ch, CURLOPT_URL, 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=2500&CMC_PRO_API_KEY=bc645ae0-df76-42ae-aac8-a8e1ab01dd17');
+	curl_setopt($ch, CURLOPT_URL, 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=2500&CMC_PRO_API_KEY='.CMC_API_KEY);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, true);
@@ -86,8 +86,9 @@ function getDataINIT() {
 // ----------------------------------------------------------------------------------------
 //-------------- [ MAIN CODE ] -----------------------------------------------------
 // ----------------------------------------------------------------------------------------
+include_once('./cmc-api-key.php');
 
-$topCC= array();
+$topCC = array();
 $change1hArr = array();
 $change24hArr = array();
 $change7dArr = array();

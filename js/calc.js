@@ -70,7 +70,7 @@ function calcCoinEqv(inputBTCeqv, coin) { // Calculates BTC eqv. for output
       case 'WAVES':
          return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdWAVES).toFixed(8);
       case 'DOGE':
-         return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdDOGE).toFixed(4);
+         return ((inputBTCeqv * ALL_RATES.usdBTC) / ALL_RATES.usdDOGE).toFixed(2);
          // --- FIATS ---
       case 'USD':
          return (inputBTCeqv * ALL_RATES.usdBTC).toFixed(6);
