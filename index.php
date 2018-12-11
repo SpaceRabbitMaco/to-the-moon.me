@@ -78,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12 base-div" id='main-div-cc-cc1h'>
-				 <h2>Data will be</h2>
+				 <h1>One hour Cryptocurrency price change</h1>
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 		<div class="container" >
 			<div class="row">
 				<div class="col-xl-12 base-div marg-top-2em" id='main-div-cc-cc24h'>
-				 <h2>load</h2>
+				 <h1>24 hours Cryptocurrency price change</h1>
 				</div>
 			</div>
 		</div>
@@ -94,7 +94,7 @@
 		<div class="container" >
 			<div class="row">
 				<div class="col-xl-12 base-div marg-top-2em" id='main-div-cc-cc1d'>
-				 <h2>soon...</h2>
+				 <h1>7 days Cryptocurrency price change</h1>
 				</div>
 			</div>
 		</div>

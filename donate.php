@@ -77,7 +77,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12 base-div" style="padding-bottom:1em;">
-					<h2 class="marg-bot-0_5em">Donate</h2>
+					<h1 class="marg-bot-0_5em">Donate</h1>
 					<p class="donate-p">
 						<span>
 							Если сайт показался вам полезным, то, при желании, вы можете оказать поддержку

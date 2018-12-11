@@ -76,7 +76,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12 base-div">
-					<h2>FAQ</h2>
+					<h1>FAQ</h1 >
 
 					<div class="faq-div faq-div-left marg-bot-2em">
 						<p class="faq-title">Мониторинг монет</p>

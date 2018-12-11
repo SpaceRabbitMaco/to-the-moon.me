@@ -81,7 +81,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12 base-div">
-					<h2>Cryptocurrency Converter Calculator</h2>
+					<h1>Cryptocurrency Converter Calculator</h1>
 
 					<div class='cc-main-div-conteiner'><!-- WIDGETS START -->
 						<div class='cc-div-conteiner' id='bitcoin-div-1h'>

@@ -135,12 +135,12 @@ function sortPriceChange7d($ccA, $ccB) {
 
 function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
       var $title, $tableID, $data;
-      if ($type == 'cc1h') {$title = '1 hour'; $tableID = 'table-1_hour'; $data = '<div id="price-drop-timestamp">time</div>';}
-      if ($type == 'cc24h') {$title = '24 hours'; $tableID = 'table-24_hours'; $data = '';}
-      if ($type == 'cc1d') {$title = '7 days'; $tableID = 'table-7_days'; $data = '';}
+      if ($type == 'cc1h') {$title = 'One hour Cryptocurrency '; $tableID = 'table-1_hour'; $data = '<div id="price-drop-timestamp">time</div>';}
+      if ($type == 'cc24h') {$title = '24 hours Cryptocurrency '; $tableID = 'table-24_hours'; $data = '';}
+      if ($type == 'cc1d') {$title = '7 days Cryptocurrency '; $tableID = 'table-7_days'; $data = '';}
       var $htmlData = $data;
 
-      $htmlData = $htmlData + '<h2>' + $title + ' price change</h2><span><u>Coins</u>: ' + $arr.length + ' | <u>Total coins</u>: ' + $ccTotalCount + '</span><table class="base-table" id="' + $tableID + '"><tr><th class="table-th1">#</th><th class="table-th2">Name</th><th class="table-th3">Symbol</th><th class="table-th5">Price (sat.)</th><th class="table-th5">Price ($)</th><th class="table-th6">Volume (24h)</th><th class="th-1h table-th7">% 1h</th><th class="th-24h table-th8">% 24h</th><th class="th-7d table-th9">% 7d</th></tr>';
+      $htmlData = $htmlData + '<h1>' + $title + ' price change</h1><span><u>Coins</u>: ' + $arr.length + ' | <u>Total coins</u>: ' + $ccTotalCount + '</span><table class="base-table" id="' + $tableID + '"><tr><th class="table-th1">#</th><th class="table-th2">Name</th><th class="table-th3">Symbol</th><th class="table-th5">Price (sat.)</th><th class="table-th5">Price ($)</th><th class="table-th6">Volume (24h)</th><th class="th-1h table-th7">% 1h</th><th class="th-24h table-th8">% 24h</th><th class="th-7d table-th9">% 7d</th></tr>';
 
       for (var i = 0; i < $arr.length; i++) {
 				var rank =  $arr[i].cmc_rank;
@@ -169,7 +169,7 @@ function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
 					volume_24h = $arr[i].quote.USD.volume_24h.toFixed(0);
 					volume_24h = volume_24h.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 				}
-				
+
 
 				$htmlData = $htmlData+'<tr><td class="td-pos table-td1">'+rank+'</td><td class="td-name table-td2"><img src="https://s2.coinmarketcap.com/static/img/coins/16x16/'+id+'.png"  alt="Bitcoin" height="16" width="16"><a target="_blank" href="https://coinmarketcap.com/currencies/'+slug+'/">'+name+'</a></td><td class="td-abr table-td3">'+symbol+'</td><td class="td-sat table-td1">'+eqvBTC+'</td><td class="td-price table-td5"><a target="_blank" href="https://coinmarketcap.com/assets/'+slug+'/#markets">'+usdPrice+'</a></td><td class="td-volume-24 table-td6">'+volume_24h+'<td class="td-1h-change table-td7">'+change1h+'</td><td class="td-24h-change table-td8">'+change24h+'</td><td class="td-7d-change table-td9">'+change7d+'</td></tr>';
       }
