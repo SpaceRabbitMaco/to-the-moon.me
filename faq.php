@@ -95,7 +95,7 @@
 									</ul>
 								</ul>
 							<li>
-								Данные обновляются автоматически каждые 5 минут
+								Данные обновляются автоматически каждые 20 минут
 							</li>
 							<li>
 								Вся информация загружается с <a href='https://coinmarketcap.com/all/views/all/' target='_blank'>coinmarketcap.com</a>
@@ -105,10 +105,13 @@
 						<p class="faq-title marg-top-2em">Калькулятор Криптовалют</p>
 						<ul>
 							<li>
-								Данные обновляются автоматически каждые 5 минут
+								Данные обновляются  каждые 20 минут
 							</li>
 							<li>
-								Last update зависит от данных, которые приходят от  <a href="https://coinmarketcap.com" target="_blank">CMC</a>
+								Last update зависит от данных, которые приходят от  <a href="https://coinmarketcap.com" target="_blank">coinmarketcap.com</a>
+							</li>
+							<li>
+								Курсы фиатных валют с <a href="https://exchangeratesapi.io/" target="_blank">exchangeratesapi.io</a>
 							</li>
 						</ul>
 					</div>
@@ -130,7 +133,7 @@
 									</ul>
 								</ul>
 							<li>
-								Data is updated automatically every 5 minutes
+								Data is updated automatically every 20 minutes
 							</li>
 							<li>
 								All information is downloaded from the <a href='https://coinmarketcap.com/all/views/all/' target='_blank'>coinmarketcap.com</a>
@@ -140,10 +143,13 @@
 						<p class="faq-title marg-top-2em">Cryptocurrency Calculator</p>
 						<ul>
 							<li>
-								Data is updated automatically every 5 minutes
+								Data is updated automatically every 20 minutes
 							</li>
 							<li>
-								Last update depends on the data, that comes from the <a href="https://coinmarketcap.com" target="_blank">CMC</a>
+								Last update depends on the data, that comes from the <a href="https://coinmarketcap.com" target="_blank">coinmarketcap.com</a>
+							</li>
+							<li>
+								Fiat rates from <a href="https://exchangeratesapi.io/" target="_blank">exchangeratesapi.io</a>
 							</li>
 						</ul>
 					</div>
@@ -168,10 +174,11 @@
 
 	footerToBottom();
 
-
-	console.warn('ver 1.9 (Fixed CC icons issue)');
+	console.clear();
+	console.warn('ver 2.0 (Adaptet for new CMC Pro API)');
 	console.log('---');
-	console.warn('ver 1.8 (Calc update (more crypto, fiat inputs))');
+	console.log('ver 1.9 (Fixed CC icons issue)');
+	console.log('ver 1.8 (Calc update (more crypto, fiat inputs))');
 	console.log('~ ver 1.7 (composer, bot (in progress))');
 	console.log('~ ver 1.6 (https)');
 	console.log('~ ver 1.5 (twitter)');
