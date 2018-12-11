@@ -11,8 +11,8 @@ var TOP_CC = getJSONData('../saved_data/topCC.json');
 // --------- [ FUNCTIONS ] ----------
 // ------------------------------------------
 function parseTimeLastUpdate(S) { // CMC UTC TIME (+3 for MSK)
-   S= S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
-	return S;
+   S = S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
+   return S;
 }
 
 function getAllUSDRates(TOP_CC_ARR) {
@@ -138,74 +138,74 @@ function calcCoinEqvInput(inputValue, coin) { // Calculates BTC eqv. of input
 }
 
 function updateTopCardsCC(ArrCC) { // Updates top CC cards
-	var LAST_UPDATE = parseTimeLastUpdate(TOP_CC);
-	var topBTC, topETH, topLTC, topUFO;
-	var siteTOP = Array();
-	var topBTCPrice;
+   var LAST_UPDATE = parseTimeLastUpdate(TOP_CC);
+   var topBTC, topETH, topLTC, topUFO;
+   var siteTOP = Array();
+   var topBTCPrice;
 
-	$.each(ArrCC, function(key, value) {
+   $.each(ArrCC, function(key, value) {
       switch (value.symbol) {
          case 'BTC':
             topBTC = value;
-				siteTOP.push(topBTC);
-				topBTCPrice = value.quote.USD.price;
+            siteTOP.push(topBTC);
+            topBTCPrice = value.quote.USD.price;
             break;
          case 'ETH':
             topETH = value;
-				siteTOP.push(topETH);
+            siteTOP.push(topETH);
             break;
          case 'LTC':
             topLTC = value;
-				siteTOP.push(topLTC);
+            siteTOP.push(topLTC);
             break;
          case 'UFO':
             topUFO = value;
-				siteTOP.push(topUFO);
+            siteTOP.push(topUFO);
             break;
          default:
       }
    });
 
-	$.each(siteTOP, function(key, value) {
-		var p_ch_1h = value.quote.USD.percent_change_1h;
-		var priceCC;
+   $.each(siteTOP, function(key, value) {
+      var p_ch_1h = value.quote.USD.percent_change_1h;
+      var priceCC;
 
-		if (p_ch_1h > 0) {
-			$('#' + value.slug + '-div-1h').css({
-				'background-color': 'rgba(76, 175, 80, 0.20)'
-			});
-			$('#' + value.slug + '-1h-change').css({
-				'color': '#4CAF50'
-			});
-		} else {
-			$('#' + value.slug + '-div-1h').css({
-				'background-color': 'rgba(255, 152, 0, 0.20)'
-			});
-			$('#' + value.slug + '-1h-change').css({
-				'color': '#FF5722'
-			});
-		}
+      if (p_ch_1h > 0) {
+         $('#' + value.slug + '-div-1h').css({
+            'background-color': 'rgba(76, 175, 80, 0.20)'
+         });
+         $('#' + value.slug + '-1h-change').css({
+            'color': '#4CAF50'
+         });
+      } else {
+         $('#' + value.slug + '-div-1h').css({
+            'background-color': 'rgba(255, 152, 0, 0.20)'
+         });
+         $('#' + value.slug + '-1h-change').css({
+            'color': '#FF5722'
+         });
+      }
 
-		$('#'+value.slug).text(value.quote.USD.price.toFixed(4));
-		$('#' + value.slug + '-1h-change').text(value.quote.USD.percent_change_1h.toFixed(2) + '%');
-		$('#' + value.slug + '-last-update').text(LAST_UPDATE);
+      $('#' + value.slug).text(value.quote.USD.price.toFixed(4));
+      $('#' + value.slug + '-1h-change').text(value.quote.USD.percent_change_1h.toFixed(2) + '%');
+      $('#' + value.slug + '-last-update').text(LAST_UPDATE);
 
-		if (value.symbol == 'ETH') {
-			priceCC = topETH.quote.USD.price  / topBTCPrice;
-			priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-			$('#' + value.slug + '-BTC').text(priceCC);
-		}
-		if (value.symbol == 'LTC') {
-			priceCC = topLTC.quote.USD.price  / topBTCPrice;
-			priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-			$('#' + value.slug + '-BTC').text(priceCC);
-		}
-		if (value.symbol == 'UFO') {
-			priceCC = topUFO.quote.USD.price  / topBTCPrice;
-			priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-			$('#' + value.slug + '-BTC').text(priceCC);
-		}
-	});
+      if (value.symbol == 'ETH') {
+         priceCC = topETH.quote.USD.price / topBTCPrice;
+         priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+         $('#' + value.slug + '-BTC').text(priceCC);
+      }
+      if (value.symbol == 'LTC') {
+         priceCC = topLTC.quote.USD.price / topBTCPrice;
+         priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+         $('#' + value.slug + '-BTC').text(priceCC);
+      }
+      if (value.symbol == 'UFO') {
+         priceCC = topUFO.quote.USD.price / topBTCPrice;
+         priceCC = priceCC.toFixed(8).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+         $('#' + value.slug + '-BTC').text(priceCC);
+      }
+   });
 }
 
 function calculateAndSet($CC_to_BTCeqv, $CC) {
@@ -228,8 +228,8 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
                $('#input-LTC')[0].value = calcCoinEqv($CC_to_BTCeqv, 'LTC');
                break;
             case 'input-UFO':
-            	$('#input-UFO')[0].value = calcCoinEqv($CC_to_BTCeqv, 'UFO');
-            	break;
+               $('#input-UFO')[0].value = calcCoinEqv($CC_to_BTCeqv, 'UFO');
+               break;
             case 'input-BCH':
                $('#input-BCH')[0].value = calcCoinEqv($CC_to_BTCeqv, 'BCH');
                break;
@@ -286,141 +286,33 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
 }
 
 function appINIT() {
-	FIAT_RATES = getJSONData('../saved_data/usd_rates.json');
-	TOP_CC = getJSONData('../saved_data/topCC.json');
+   FIAT_RATES = getJSONData('../saved_data/usd_rates.json');
+   TOP_CC = getJSONData('../saved_data/topCC.json');
 
-	getAllUSDRates(TOP_CC);
-	updateTopCardsCC(TOP_CC);
+   getAllUSDRates(TOP_CC);
+   updateTopCardsCC(TOP_CC);
 
-	// ------------------------------------------
-	// ----- [ OLD STYLE CODE ] ------
-	// ------------------------------------------
-   // var $imputBTC = document.getElementById('input-BTC');
-   // var $imputETH = document.getElementById('input-ETH');
-   // var $imputLTC = document.getElementById('input-LTC');
-   // var $imputUFO = document.getElementById('input-UFO');
-   // var $imputBCH = document.getElementById('input-BCH');
-   // var $imputXMR = document.getElementById('input-XMR');
-   // var $imputZEC = document.getElementById('input-ZEC');
-   // var $imputXRP = document.getElementById('input-XRP');
-   // var $imputDOGE = document.getElementById('input-DOGE');
-   // var $imputDASH = document.getElementById('input-DASH');
-   // var $imputETC = document.getElementById('input-ETC');
-   // var $imputWAVES = document.getElementById('input-WAVES');
-   // var $imputUSD = document.getElementById('input-USD');
-   // var $imputEUR = document.getElementById('input-EUR');
-   // var $imputCNY = document.getElementById('input-CNY');
-   // var $imputRUB = document.getElementById('input-RUB');
-   // var $imputHKD = document.getElementById('input-HKD');
-   // var $imputGBP = document.getElementById('input-GBP');
-   // var $imputKRW = document.getElementById('input-KRW');
-   // var $imputJPY = document.getElementById('input-JPY');
+   var ALL_INPUTS = $('.cc-calc-input');
 
-	// ------------------------------------------
-	// ----- [ NEW STYLE CODE ] ------
-	// ------------------------------------------
-	var ALL_INPUTS = $('.cc-calc-input');
+   $.each(ALL_INPUTS, function(key, value) {
+      var inputID = value.id.split('-')[1];
 
-	$.each(ALL_INPUTS, function(key, value) {
-		var inputID = value.id.split('-')[1];
-
-		if (inputID == 'BTC') {
-			value.oninput = function() {
-		      calculateAndSet(value.value, inputID);
-		   };
-		} else {
-			value.oninput = function() {
-		      calculateAndSet(calcCoinEqvInput(value.value, inputID), inputID);
-		   };
-		}
-	});
-
-	// ------------------------------------------
-	// ----- [ OLD STYLE CODE ] ------
-	// ------------------------------------------
-   // $imputBTC.oninput = function() {
-   //    calculateAndSet($imputBTC.value, 'BTC');
-   // };
-	//
-   // $imputETH.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputETH.value, 'ETH'), 'ETH');
-   // };
-	//
-   // $imputLTC.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputLTC.value, 'LTC'), 'LTC');
-   // };
-	//
-   // $imputUFO.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputUFO.value, 'UFO'), 'UFO');
-   // };
-	//
-   // $imputBCH.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputBCH.value, 'BCH'), 'BCH');
-   // };
-	//
-   // $imputXMR.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputXMR.value, 'XMR'), 'XMR');
-   // };
-	//
-   // $imputZEC.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputZEC.value, 'ZEC'), 'ZEC');
-   // };
-	//
-   // $imputXRP.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputXRP.value, 'XRP'), 'XRP');
-   // };
-	//
-   // $imputDASH.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputDASH.value, 'DASH'), 'DASH');
-   // };
-	//
-   // $imputETC.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputETC.value, 'ETC'), 'ETC');
-   // };
-	//
-   // $imputWAVES.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputWAVES.value, 'WAVES'), 'WAVES');
-   // };
-	//
-   // $imputDOGE.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputDOGE.value, 'DOGE'), 'DOGE');
-   // };
-	//
-   // $imputUSD.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputUSD.value, 'USD'), 'USD');
-   // };
-	//
-   // $imputEUR.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputEUR.value, 'EUR'), 'EUR');
-   // };
-	//
-   // $imputCNY.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputCNY.value, 'CNY'), 'CNY');
-   // };
-	//
-   // $imputRUB.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputRUB.value, 'RUB'), 'RUB');
-   // };
-	//
-   // $imputHKD.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputHKD.value, 'HKD'), 'HKD');
-   // };
-	//
-   // $imputGBP.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputGBP.value, 'GBP'), 'GBP');
-   // };
-	//
-   // $imputKRW.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputKRW.value, 'KRW'), 'KRW');
-   // };
-	//
-   // $imputJPY.oninput = function() {
-   //    calculateAndSet(calcCoinEqvInput($imputJPY.value, 'JPY'), 'JPY');
-   // };
+      if (inputID == 'BTC') {
+         value.oninput = function() {
+            calculateAndSet(value.value, inputID);
+         };
+      } else {
+         value.oninput = function() {
+            calculateAndSet(calcCoinEqvInput(value.value, inputID), inputID);
+         };
+      }
+   });
 }
 // ------------------------------------------
 
 // NEW FUNCTIONS AND NEW VARS FOR PROFIT CALC
+// NEED REANABLE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//
 // var BTC_was = document.getElementById('new-btc-was');
 // var BTC_now = document.getElementById('new-btc-now');
 // var BTC_profit = document.getElementById('new-btc-profit-sat');

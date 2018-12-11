@@ -287,10 +287,10 @@
 						</div>
 					   </div><!-- div-row -->
 
-					   <h1 class="one"><span>Profit Calc</span></h1>
+					   <h1 style="display:none;" class="one"><span>Profit Calc</span></h1>
 
 
-					  <div class="row"><!-- div-row -->
+					  <div style="display:none;" class="row"><!-- div-row -->
 						  <div class="col-lg-6 marg-bot-1em">
 							 <div class="input-group">
 								<select class="" name="" id='new-select-cc-was'></select>
@@ -311,7 +311,7 @@
 						</div>
 					</div><!-- div-row -->
 
-					<div class="row"><!-- div-row -->
+					<div style="display:none;" class="row"><!-- div-row -->
 						<div class="col-lg-4">
 						     <div class="input-group">
 							      <span class="input-group-addon input-profit-title title-cursor" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="">Sat.</span>
@@ -356,7 +356,7 @@
 
 	$(function() {
 		setTimeout(appINIT, 300); // app init
-		var timerId1 = setInterval(appINIT, 300000); // app reload
+		var timerId1 = setInterval(appINIT, 1200000); // app reload
 	});
 
 

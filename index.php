@@ -100,7 +100,7 @@
 		</div>
 
 		<div id='bottom'>
-			<span>Made by <a href='https://twitter.com/SpaceRabbitMaco' target="_blank">@SpaceRabbitMaco</a></span>
+			<span class="bottom-span-one">Made by <a href='https://twitter.com/SpaceRabbitMaco' target="_blank">@SpaceRabbitMaco</a></span>
 			◑
 			<span id='bottom-CMC'>All data from <a href='https://coinmarketcap.com/' target='_blank'>CMC</a></span>
 		</div>
@@ -111,7 +111,7 @@
 
 				var $timerID = setInterval(function() { // set interval for information refresh
 			      	startPriceDrop(false);
-				}, 300000);
+				}, 1200000);
 			});
 		</script>
 
