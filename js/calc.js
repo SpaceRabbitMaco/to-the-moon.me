@@ -12,7 +12,7 @@ var TOP_CC = getJSONData('../saved_data/topCC.json');
 // ------------------------------------------
 function parseTimeLastUpdateAndSet(S) { // CMC UTC TIME (+3 for MSK)
 	var date = S[0].last_updated.split('T')[0];
-	S = 'Last update at: ' + date + ' ' + S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
+	S = 'Last update at: ' + date + ' _' + S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + '_ UTC';
 	$('#calc-timestamp').html(S);
 }
 
