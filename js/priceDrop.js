@@ -70,13 +70,19 @@ function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
    $('#main-div-cc-' + $type).html($htmlData);
 } // end
 
+function parseTimeLastUpdatet(S) { // CMC UTC TIME (+3 for MSK)
+	console.log(S);
+	var date = S.split('T')[0];
+	S = 'Last update at: ' +date + ' ' + S.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
+	return S;
+}
+
 function startPriceDrop(isFirst) {
    $(function() {
       var ALL_DATA = getJSONData('../saved_data/all_data.json');
 
       var TIME_DATA_RECIVED = ALL_DATA.status.timestamp;
-      TIME_DATA_RECIVED = TIME_DATA_RECIVED.split('.')[0];
-      TIME_DATA_RECIVED = TIME_DATA_RECIVED.split('T').join(' ') + ' UTC';
+		TIME_DATA_RECIVED = parseTimeLastUpdatet(TIME_DATA_RECIVED);
 
       var BTC_PRICE = ALL_DATA.data[0].quote.USD.price.toFixed(4);
       var ALL_COINS_COUNT = ALL_DATA.data.length;
@@ -94,7 +100,7 @@ function startPriceDrop(isFirst) {
       $drawTable(CHANGE_24H, 'cc24h', ALL_COINS_COUNT, BTC_PRICE);
       $drawTable(CHANGE_7D, 'cc1d', ALL_COINS_COUNT, BTC_PRICE);
 
-      $('#price-drop-timestamp').html('Last update at: ' + TIME_DATA_RECIVED);
+      $('#price-drop-timestamp').html(TIME_DATA_RECIVED);
 
       if (isFirst) {
          console.log('First Launch');
