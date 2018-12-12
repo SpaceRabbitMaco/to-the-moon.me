@@ -10,10 +10,13 @@ var TOP_CC = getJSONData('../saved_data/topCC.json');
 // ------------------------------------------
 // --------- [ FUNCTIONS ] ----------
 // ------------------------------------------
-function parseTimeLastUpdate(S) { // CMC UTC TIME (+3 for MSK)
-   S = S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
-   return S;
+function parseTimeLastUpdateAndSet(S) { // CMC UTC TIME (+3 for MSK)
+	var date = S[0].last_updated.split('T')[0];
+	S = 'Last update at: ' + date + ' ' + S[0].last_updated.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + ' UTC';
+	$('#calc-timestamp').html(S);
 }
+
+
 
 function getAllUSDRates(TOP_CC_ARR) {
    $.each(TOP_CC, function(key, value) {
@@ -138,7 +141,7 @@ function calcCoinEqvInput(inputValue, coin) { // Calculates BTC eqv. of input
 }
 
 function updateTopCardsCC(ArrCC) { // Updates top CC cards
-   var LAST_UPDATE = parseTimeLastUpdate(TOP_CC);
+	parseTimeLastUpdateAndSet(TOP_CC);
    var topBTC, topETH, topLTC, topUFO;
    var siteTOP = Array();
    var topBTCPrice;
@@ -188,7 +191,6 @@ function updateTopCardsCC(ArrCC) { // Updates top CC cards
 
       $('#' + value.slug).text(value.quote.USD.price.toFixed(4));
       $('#' + value.slug + '-1h-change').text(value.quote.USD.percent_change_1h.toFixed(2) + '%');
-      $('#' + value.slug + '-last-update').text(LAST_UPDATE);
 
       if (value.symbol == 'ETH') {
          priceCC = topETH.quote.USD.price / topBTCPrice;

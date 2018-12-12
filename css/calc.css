@@ -22,6 +22,15 @@
 	width: 65px !important;
 }
 
+#calc-timestamp {
+    display: inline-block;
+    font-size: 1.2em;
+    font-style: italic;
+    color: rgba(63, 81, 181, 0.7);
+    font-weight: bold;
+    float: right;
+}
+
 .input-fiat-title {
 	background-color: rgba(139, 195, 74, 0.3);
 	user-select: none;

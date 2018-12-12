@@ -81,6 +81,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12 base-div">
+					<div id="calc-timestamp"></div>
 					<h1>Cryptocurrency Converter Calculator</h1>
 
 					<div class='cc-main-div-conteiner'><!-- WIDGETS START -->
@@ -93,10 +94,6 @@
 							<p>
 								<span class='elem-hidden'>.</span>
 							</p>
-							<p>
-								<span class='last'>Last update: </span>
-								<span class='last' id='bitcoin-last-update'>None</span>
-							</p>
 						</div>
 						<div class='cc-div-conteiner' id='ethereum-div-1h'>
 							<p>
@@ -107,10 +104,6 @@
 							<p>
 								<span><strong>Sat</strong>: </span>
 								<span id='ethereum-BTC'>None</span>
-							</p>
-							<p>
-								<span class='last'>Last update: </span>
-								<span class='last' id='ethereum-last-update'>None</span>
 							</p>
 						</div>
 						<div class='cc-div-conteiner' id='litecoin-div-1h'>
@@ -123,10 +116,6 @@
 								<span><strong>Sat</strong>: </span>
 								<span id='litecoin-BTC'>None</span>
 							</p>
-							<p>
-								<span class='last'>Last update: </span>
-								<span class='last' id='litecoin-last-update'>None</span>
-							</p>
 						</div>
 						<div class='cc-div-conteiner' id='uniform-fiscal-object-div-1h'>
 							<p>
@@ -137,10 +126,6 @@
 							<p>
 								<span><strong>Sat</strong>: </span>
 								<span id='uniform-fiscal-object-BTC'>None</span>
-							</p>
-							<p>
-								<span class='last'>Last update: </span>
-								<span class='last' id='uniform-fiscal-object-last-update'>None</span>
 							</p>
 						</div>
 					</div><!-- WIDGETS END -->
