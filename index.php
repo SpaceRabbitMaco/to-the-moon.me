@@ -111,7 +111,7 @@
 
 				var $timerID = setInterval(function() { // set interval for information refresh
 			      	startPriceDrop(false);
-				}, 1200000);
+				}, 3600000);
 			});
 		</script>
 

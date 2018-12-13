@@ -341,7 +341,7 @@
 
 	$(function() {
 		setTimeout(appINIT, 300); // app init
-		var timerId1 = setInterval(appINIT, 1200000); // app reload
+		var timerId1 = setInterval(appINIT, 3600000); // app reload
 	});
 
 
