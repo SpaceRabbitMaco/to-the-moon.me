@@ -1,10 +1,14 @@
 <?php
+
+$fullPath = '/var/www/to_the_moonme/data/www/to-the-moon.me/';
+
 // ----------------------------------------------------------------------------------------
 //-------------- [ FUNCTIONS ] ----------------------------------------------------
 // ----------------------------------------------------------------------------------------
 function writeJSON2File($filePath, $data) {
+	global $fullPath;
 	$dataJson = json_encode($data);
-	$file = fopen($filePath, 'wt');
+	$file = fopen($fullPath.$filePath, 'wt');
 	fwrite($file, $dataJson);
 	fclose($file);
 }
@@ -30,10 +34,10 @@ function priceDropAlalytics($arr) {
 		 	array_push($topCC, $value);
 		}
 
-		writeJSON2File('../saved_data/change1h.json', $change1hArr);
-		writeJSON2File('../saved_data/change24h.json', $change24hArr);
-		writeJSON2File('../saved_data/change7d.json', $change7dArr);
-		writeJSON2File('../saved_data/topCC.json', $topCC);
+		writeJSON2File('/saved_data/change1h.json', $change1hArr);
+		writeJSON2File('/saved_data/change24h.json', $change24hArr);
+		writeJSON2File('/saved_data/change7d.json', $change7dArr);
+		writeJSON2File('/saved_data/topCC.json', $topCC);
 	}
 }
 
@@ -73,11 +77,11 @@ function getDataINIT() {
 	// $change7dArr = array();
 
 	$allDataCMC = getAllDataFromCMC();
-	writeJSON2File('../saved_data/all_data.json', $allDataCMC);
+	writeJSON2File('/saved_data/all_data.json', $allDataCMC);
 	priceDropAlalytics($allDataCMC['data']);
 
 	$USDRates = getUSDRates();
-	writeJSON2File('../saved_data/usd_rates.json', $USDRates);
+	writeJSON2File('/saved_data/usd_rates.json', $USDRates);
 
 	echo "<script>console.log('Data loaded and saved: OK')</script>";
 }
@@ -87,7 +91,7 @@ function getDataINIT() {
 //-------------- [ MAIN CODE ] -----------------------------------------------------
 // ----------------------------------------------------------------------------------------
 define("IS_ALLOW_GET_API_KEY", true);
-include_once('./cmc-api-key.php');
+include_once($fullPath.'cron/cmc-api-key.php');
 
 $topCC = array();
 $change1hArr = array();
