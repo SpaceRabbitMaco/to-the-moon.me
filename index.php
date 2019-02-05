@@ -9,10 +9,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="cryptocurrency price drop tracker, cryptocurrency low price, cryptocurrency to buy, дешевые криптовалюты, отслеживание цен на криптовалюту" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/img/moon.jpg" />
+		<meta property="og:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta property="og:title" content="Cryptocurrency price drop tracker | To-the-moon" />
 		<meta name="description" content="Cryptocurrency price drop tracker, helps to buy cryptocurrency cheaper" />
 		<meta property="og:description" content="Cryptocurrency price drop tracker, helps to buy cryptocurrency cheaper" />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@SpaceRabbitMaco" />
+		<meta name="twitter:title" content="Cryptocurrency price drop tracker" />
+		<meta name="twitter:description" content="Cryptocurrency price drop tracker, helps to buy cryptocurrency cheaper" />
+		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
+		<meta name="twitter:image:alt" content="Moon" />
+		<!-- ___META___(END)___ -->
 		<!-- ___META___(END)___ -->
 
 		<!-- ___CSS___(START)___ -->

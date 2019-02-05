@@ -9,10 +9,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="crypto calculator, crypto converter, cryptocurrency converter, cryptocurrency calculator, btc to eth, btc to ltc, конвертер криптовалют, калькулятор криптовалют, биток в эфир, биток в лайткоин" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/img/moon.jpg" />
+		<meta property="og:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta property="og:title" content="Cryptocurrency Converter Calculator | To-the-moon" />
 		<meta name="description" content="Cryptocurrency converter calculator tool, helps to convert popular cryptocurrency, also a price tracker" />
 		<meta property="og:description" content="Cryptocurrency converter calculator tool, helps to convert popular cryptocurrency, also a price tracker" />
+		
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@SpaceRabbitMaco" />
+		<meta name="twitter:title" content="To-the-moon | Calculator" />
+		<meta name="twitter:description" content="Cryptocurrency converter calculator tool, helps to convert popular cryptocurrency, also a price tracker" />
+		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
+		<meta name="twitter:image:alt" content="Moon" />
 		<!-- ___META___(END)___ -->
 
 

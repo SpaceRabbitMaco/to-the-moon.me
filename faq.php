@@ -8,10 +8,17 @@
 		<meta content='IE=edge' http-equiv='X-UA-Compatible'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/img/moon.jpg" />
+		<meta property="og:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta property="og:title" content="FAQ | To-the-moon" />
 		<meta name="description" content="Frequenly Asked Questions (FAQ)" />
 		<meta property="og:description" content="Frequenly Asked Questions (FAQ)" />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@SpaceRabbitMaco" />
+		<meta name="twitter:title" content="To-the-moon | FAQ" />
+		<meta name="twitter:description" content="Cryptocurrency price drop tracker, helps to buy cryptocurrency cheaper" />
+		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
+		<meta name="twitter:image:alt" content="Moon" />
 		<!-- ___META___(END)___ -->
 
 		<!-- ___CSS___(START)___ -->
