@@ -1,8 +1,8 @@
 <?php
 
 include_once '../php_modules/simple_html_dom.php';
-$fullPath = '/var/www/to_the_moonme/data/www/to-the-moon.me/';
-//$fullPath = '../saved_data/';
+//$fullPath = '/var/www/to_the_moonme/data/www/to-the-moon.me/';
+$fullPath = '../saved_data/';
 $NodesList = array();
 // ----------------------------------------------------------------------------------------
 //-------------- [ FUNCTIONS ] ----------------------------------------------------
@@ -15,20 +15,21 @@ function writeJSON2File($filePath, $data) {
   fclose($file);
 }
 
-function writeNodes($id, $name, $ticker, $nprice, $roi, $liq, $link, $nodes) {
+function writeNodes($id, $name, $ticker, $nprice, $roi, $liq, $link, $nodes, $site) {
   global $NodesList;
+  $id = strtolower($id);
 
   if (array_key_exists($id, $NodesList)) {
     return false;
   }
-
   $NodesList[$id]['CCName'] = $name;
   $NodesList[$id]['CCTicker'] = $ticker;
   $NodesList[$id]['NodePrice'] = $nprice;
   $NodesList[$id]['ROI'] = $roi;
   $NodesList[$id]['Liqudity'] = $liq;
   $NodesList[$id]['Link'] = $link;
-	$NodesList[$id]['Nodes'] = $nodes;
+  $NodesList[$id]['Nodes'] = $nodes;
+  $NodesList[$id]['Site'] = $site;
 }
 
 //Удаляем невидимные ASCII символны из строки
@@ -46,8 +47,9 @@ function get_mno_info() {
     if ($CCFullName == '') {continue;}
 
     $CCName = trim(explode('(', $CCFullName)[0]);
+    $CCNameID = str_replace(' ', '_', $CCName);
     $CCTicker = trim(explode(')', explode('(', $CCFullName)[1])[0]);
-    $CCID = $CCName . '_' . $CCTicker;
+    $CCID = $CCNameID . '_' . $CCTicker;
 
     $Href = $tr->find('a', 0)->href;
     $Href = 'https://masternodes.online' . $Href;
@@ -82,7 +84,7 @@ function get_mno_info() {
 
     }
 
-    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes);
+    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes, 'masternodes.online');
   }
 }
 
@@ -90,31 +92,32 @@ function get_mncap_info() {
   $html = file_get_html('https://masternodecap.com/');
 
   foreach ($html->find('table[id=masternodes] tr') as $tr) {
-    $CCFullName = $tr->find('td', 1)->plaintext;
+    $CCFullName = $tr->find('td a', 0)->plaintext;
     $CCFullName = remSpaces($CCFullName);
     if ($CCFullName == '') {continue;}
 
     $CCName = trim(explode('(', $CCFullName)[0]);
+    $CCNameID = str_replace(' ', '_', $CCName);
     $CCTicker = trim(explode(')', explode('(', $CCFullName)[1])[0]);
-    $CCID = $CCName . '_' . $CCTicker;
+    $CCID = $CCNameID . '_' . $CCTicker;
 
     $Href = $tr->find('a', 0)->href;
     $Href = 'https://masternodecap.com' . $Href;
 
-    $NodePrice = $tr->find('td', 9)->plaintext;
+    $NodePrice = $tr->find('td', 8)->plaintext;
     $NodePrice = remSpaces($NodePrice);
     $NodePrice = substr($NodePrice, 1);
     $NodePrice = str_replace(',', '', $NodePrice);
     $NodePrice = floatval($NodePrice);
 
-    $Roi = $tr->find('td', 4)->plaintext;
+    $Roi = $tr->find('td', 3)->plaintext;
     $Roi = substr($Roi, 0, -2);
     $Roi = str_replace(',', '', $Roi);
 
-    $Nodes = $tr->find('td', 7)->plaintext;
+    $Nodes = $tr->find('td', 6)->plaintext;
     $Nodes = str_replace(',', '', $Nodes);
 
-    $Vol = $tr->find('td', 6)->plaintext;
+    $Vol = $tr->find('td', 5)->plaintext;
     $Vol = remSpaces($Vol);
     $Vol = substr($Vol, 1);
     $Vol = str_replace(',', '', $Vol);
@@ -131,7 +134,7 @@ function get_mncap_info() {
 
     }
 
-    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes);
+    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes, 'masternodecap.com');
   }
 }
 
@@ -144,8 +147,10 @@ function get_mnrank_info() {
     if ($CCFullName == '') {continue;}
 
     $CCName = trim(explode('(', $CCFullName)[0]);
+    $CCName = remSpaces($CCName);
+    $CCNameID = str_replace(' ', '_', $CCName);
     $CCTicker = trim(explode(')', explode('(', $CCFullName)[1])[0]);
-    $CCID = $CCName . '_' . $CCTicker;
+    $CCID = $CCNameID . '_' . $CCTicker;
 
     $Href = $tr->find('a', 0)->href;
     $Href = 'https://mnrank.com' . $Href;
@@ -181,7 +186,7 @@ function get_mnrank_info() {
       $Liq = 'None';
     }
 
-    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes);
+    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes, 'mnrank.com');
   }
 }
 
@@ -190,12 +195,13 @@ function get_mnlive_info() {
 
   foreach ($html->find('table[id=dataTable1] tr') as $tr) {
     $CCFullName = $tr->find('td', 0)->plaintext;
-		$CCFullName = remSpaces($CCFullName);
+    $CCFullName = remSpaces($CCFullName);
     if ($CCFullName == '') {continue;}
 
     $CCName = trim(explode('(', $CCFullName)[0]);
+    $CCNameID = str_replace(' ', '_', $CCName);
     $CCTicker = trim(explode(')', explode('(', $CCFullName)[1])[0]);
-    $CCID = $CCName . '_' . $CCTicker;
+    $CCID = $CCNameID . '_' . $CCTicker;
 
     $Href = $tr->find('a', 0)->href;
 
@@ -227,10 +233,9 @@ function get_mnlive_info() {
       $Liq = 'None';
     }
 
-    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes);
+    writeNodes($CCID, $CCName, $CCTicker, $NodePrice, $Roi, $Liq, $Href, $Nodes, 'masternode.live');
   }
 }
-
 
 function app_init() {
   get_mno_info();
@@ -238,7 +243,6 @@ function app_init() {
   get_mncap_info();
   get_mnlive_info();
 }
-
 
 // ----------------------------------------------------------------------------------------
 
@@ -250,5 +254,5 @@ app_init();
 echo '<pre>';
 print_r($NodesList);
 echo '</pre>';
-writeJSON2File('nodes_data.json',$NodesList);
+writeJSON2File('nodes_data.json', $NodesList);
 ?>

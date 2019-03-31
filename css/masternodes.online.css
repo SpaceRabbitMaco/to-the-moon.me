@@ -1,0 +1,3321 @@
+.coin {
+  display: inline-block;
+  background: url("../img/mnodes_online.png") no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+  margin-right: 1.5em;
+  vertical-align: middle;
+}
+
+.coin-1X2 {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -5px;
+}
+
+.coin-ABET {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -5px;
+}
+
+.coin-ABS {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -5px;
+}
+
+.coin-ACCO {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -5px;
+}
+
+.coin-ACED {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -5px;
+}
+
+.coin-ACR {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -5px;
+}
+
+.coin-ACRE {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -5px;
+}
+
+.coin-ADD {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -5px;
+}
+
+.coin-ADN {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -5px;
+}
+
+.coin-ADVANCE {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -5px;
+}
+
+.coin-AEG {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -5px;
+}
+
+.coin-AFF {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -5px;
+}
+
+.coin-AFRO {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -5px;
+}
+
+.coin-AGCMN {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -5px;
+}
+
+.coin-AGDN {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -5px;
+}
+
+.coin-AGM {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -5px;
+}
+
+.coin-AGU {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -5px;
+}
+
+.coin-AIAS {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -5px;
+}
+
+.coin-AKL {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -5px;
+}
+
+.coin-ALCUP {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -5px;
+}
+
+.coin-ALP {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -5px;
+}
+
+.coin-ALQO {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -5px;
+}
+
+.coin-AMNZ {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -5px;
+}
+
+.coin-ANDS {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -31px;
+}
+
+.coin-ANS {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -31px;
+}
+
+.coin-APEIR {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -31px;
+}
+
+.coin-APIS-GENERAL {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -31px;
+}
+
+.coin-APIS-MAJOR {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -31px;
+}
+
+.coin-APIS-PRIVATE {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -31px;
+}
+
+.coin-APR {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -31px;
+}
+
+.coin-AQA {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -31px;
+}
+
+.coin-ARC {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -31px;
+}
+
+.coin-ARION {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -31px;
+}
+
+.coin-ARKT {
+  width: 16px;
+  height: 13px;
+  background-position: -265px -31px;
+}
+
+.coin-ASTR {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -31px;
+}
+
+.coin-ATHR {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -31px;
+}
+
+.coin-AZART {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -31px;
+}
+
+.coin-BASE {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -31px;
+}
+
+.coin-BASHC {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -31px;
+}
+
+.coin-BBK {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -31px;
+}
+
+.coin-BBP {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -31px;
+}
+
+.coin-BCARD {
+  width: 13px;
+  height: 16px;
+  background-position: -473px -31px;
+}
+
+.coin-BECN {
+  width: 16px;
+  height: 16px;
+  background-position: -496px -31px;
+}
+
+.coin-BEET {
+  width: 16px;
+  height: 16px;
+  background-position: -522px -31px;
+}
+
+.coin-BHD {
+  width: 16px;
+  height: 16px;
+  background-position: -548px -31px;
+}
+
+.coin-BHN {
+  width: 16px;
+  height: 16px;
+  background-position: -574px -31px;
+}
+
+.coin-BIH {
+  width: 13px;
+  height: 16px;
+  background-position: -5px -57px;
+}
+
+.coin-BIR {
+  width: 16px;
+  height: 10px;
+  background-position: -28px -57px;
+}
+
+.coin-BIT {
+  width: 16px;
+  height: 16px;
+  background-position: -54px -57px;
+}
+
+.coin-BITG {
+  width: 16px;
+  height: 16px;
+  background-position: -80px -57px;
+}
+
+.coin-BLCR {
+  width: 16px;
+  height: 16px;
+  background-position: -106px -57px;
+}
+
+.coin-BLOCK {
+  width: 16px;
+  height: 16px;
+  background-position: -132px -57px;
+}
+
+.coin-BLST {
+  width: 16px;
+  height: 16px;
+  background-position: -158px -57px;
+}
+
+.coin-BLT {
+  width: 16px;
+  height: 16px;
+  background-position: -184px -57px;
+}
+
+.coin-BLTG {
+  width: 16px;
+  height: 16px;
+  background-position: -210px -57px;
+}
+
+.coin-BND {
+  width: 16px;
+  height: 16px;
+  background-position: -236px -57px;
+}
+
+.coin-BOS {
+  width: 16px;
+  height: 16px;
+  background-position: -262px -57px;
+}
+
+.coin-BOXY {
+  width: 16px;
+  height: 16px;
+  background-position: -288px -57px;
+}
+
+.coin-BRO {
+  width: 16px;
+  height: 16px;
+  background-position: -314px -57px;
+}
+
+.coin-BSA {
+  width: 16px;
+  height: 16px;
+  background-position: -340px -57px;
+}
+
+.coin-BSD {
+  width: 16px;
+  height: 16px;
+  background-position: -366px -57px;
+}
+
+.coin-BTAD {
+  width: 16px;
+  height: 16px;
+  background-position: -392px -57px;
+}
+
+.coin-BTC {
+  width: 16px;
+  height: 16px;
+  background-position: -418px -57px;
+}
+
+.coin-BTCF {
+  width: 16px;
+  height: 19px;
+  background-position: -444px -57px;
+}
+
+.coin-BTCONE {
+  width: 16px;
+  height: 16px;
+  background-position: -470px -57px;
+}
+
+.coin-BTDX {
+  width: 16px;
+  height: 16px;
+  background-position: -496px -57px;
+}
+
+.coin-BTXC {
+  width: 16px;
+  height: 16px;
+  background-position: -522px -57px;
+}
+
+.coin-BULL {
+  width: 16px;
+  height: 16px;
+  background-position: -548px -57px;
+}
+
+.coin-BWG {
+  width: 16px;
+  height: 16px;
+  background-position: -574px -57px;
+}
+
+.coin-BWK {
+  width: 16px;
+  height: 13px;
+  background-position: -5px -83px;
+}
+
+.coin-C2P {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -83px;
+}
+
+.coin-C4L {
+  width: 16px;
+  height: 14px;
+  background-position: -57px -83px;
+}
+
+.coin-CADS {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -83px;
+}
+
+.coin-CARDB5000 {
+  width: 13px;
+  height: 16px;
+  background-position: -109px -83px;
+}
+
+.coin-CARE {
+  width: 16px;
+  height: 16px;
+  background-position: -132px -83px;
+}
+
+.coin-CATO {
+  width: 16px;
+  height: 16px;
+  background-position: -158px -83px;
+}
+
+.coin-CAZ {
+  width: 16px;
+  height: 16px;
+  background-position: -184px -83px;
+}
+
+.coin-CBS {
+  width: 16px;
+  height: 16px;
+  background-position: -210px -83px;
+}
+
+.coin-CBX {
+  width: 16px;
+  height: 16px;
+  background-position: -236px -83px;
+}
+
+.coin-CCBC {
+  width: 16px;
+  height: 16px;
+  background-position: -262px -83px;
+}
+
+.coin-CDM {
+  width: 16px;
+  height: 16px;
+  background-position: -288px -83px;
+}
+
+.coin-CDS {
+  width: 16px;
+  height: 16px;
+  background-position: -314px -83px;
+}
+
+.coin-CDZC {
+  width: 16px;
+  height: 16px;
+  background-position: -340px -83px;
+}
+
+.coin-CFL {
+  width: 16px;
+  height: 16px;
+  background-position: -366px -83px;
+}
+
+.coin-CFUND {
+  width: 16px;
+  height: 16px;
+  background-position: -392px -83px;
+}
+
+.coin-CHC {
+  width: 16px;
+  height: 16px;
+  background-position: -418px -83px;
+}
+
+.coin-CHEESE {
+  width: 16px;
+  height: 16px;
+  background-position: -470px -83px;
+}
+
+.coin-CHMC {
+  width: 16px;
+  height: 16px;
+  background-position: -496px -83px;
+}
+
+.coin-CIF {
+  width: 16px;
+  height: 16px;
+  background-position: -522px -83px;
+}
+
+.coin-CIV {
+  width: 16px;
+  height: 16px;
+  background-position: -548px -83px;
+}
+
+.coin-CLG {
+  width: 14px;
+  height: 16px;
+  background-position: -574px -83px;
+}
+
+.coin-CMOS {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -109px;
+}
+
+.coin-CNMC {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -109px;
+}
+
+.coin-COLX {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -109px;
+}
+
+.coin-COTN {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -109px;
+}
+
+.coin-CPTS {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -109px;
+}
+
+.coin-CRAVE {
+  width: 14px;
+  height: 16px;
+  background-position: -135px -109px;
+}
+
+.coin-CRC {
+  width: 16px;
+  height: 16px;
+  background-position: -159px -109px;
+}
+
+.coin-CRCO {
+  width: 16px;
+  height: 16px;
+  background-position: -185px -109px;
+}
+
+.coin-CRM {
+  width: 16px;
+  height: 16px;
+  background-position: -211px -109px;
+}
+
+.coin-CROP {
+  width: 16px;
+  height: 16px;
+  background-position: -237px -109px;
+}
+
+.coin-CROP10000 {
+  width: 16px;
+  height: 16px;
+  background-position: -263px -109px;
+}
+
+.coin-CROP20000 {
+  width: 16px;
+  height: 16px;
+  background-position: -289px -109px;
+}
+
+.coin-CROP30000 {
+  width: 16px;
+  height: 16px;
+  background-position: -315px -109px;
+}
+
+.coin-CRS {
+  width: 16px;
+  height: 16px;
+  background-position: -341px -109px;
+}
+
+.coin-CRSX {
+  width: 16px;
+  height: 16px;
+  background-position: -367px -109px;
+}
+
+.coin-CRW {
+  width: 16px;
+  height: 16px;
+  background-position: -393px -109px;
+}
+
+.coin-CRW-SN {
+  width: 16px;
+  height: 16px;
+  background-position: -419px -109px;
+}
+
+.coin-CRZ {
+  width: 16px;
+  height: 16px;
+  background-position: -445px -109px;
+}
+
+.coin-CSPN {
+  width: 16px;
+  height: 16px;
+  background-position: -471px -109px;
+}
+
+.coin-CSTL {
+  width: 16px;
+  height: 16px;
+  background-position: -497px -109px;
+}
+
+.coin-CTSC {
+  width: 16px;
+  height: 16px;
+  background-position: -523px -109px;
+}
+
+.coin-CTT {
+  width: 16px;
+  height: 16px;
+  background-position: -549px -109px;
+}
+
+.coin-CUBIS {
+  width: 16px;
+  height: 15px;
+  background-position: -575px -109px;
+}
+
+.coin-CUX {
+  width: 16px;
+  height: 16px;
+  background-position: -575px -134px;
+}
+
+.coin-CZE {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -160px;
+}
+
+.coin-D {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -160px;
+}
+
+.coin-DACHX {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -160px;
+}
+
+.coin-DAS {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -160px;
+}
+
+.coin-DASH {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -160px;
+}
+
+.coin-DASHG {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -160px;
+}
+
+.coin-DEV {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -160px;
+}
+
+.coin-DGC {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -160px;
+}
+
+.coin-DGM {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -160px;
+}
+
+.coin-DIN {
+  width: 16px;
+  height: 17px;
+  background-position: -239px -160px;
+}
+
+.coin-DIVI-COPPER {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -160px;
+}
+
+.coin-DIVI-DIAMOND {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -160px;
+}
+
+.coin-DIVI-GOLD {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -160px;
+}
+
+.coin-DIVI-PLATINUM {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -160px;
+}
+
+.coin-DIVI-SILVER {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -160px;
+}
+
+.coin-DKPC {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -160px;
+}
+
+.coin-DLN {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -160px;
+}
+
+.coin-DMD {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -160px;
+}
+
+.coin-DOGEC {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -160px;
+}
+
+.coin-DP {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -160px;
+}
+
+.coin-DRL {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -160px;
+}
+
+.coin-DSR {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -160px;
+}
+
+.coin-DTEM {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -160px;
+}
+
+.coin-DVD {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -186px;
+}
+
+.coin-DVI {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -186px;
+}
+
+.coin-DXO {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -186px;
+}
+
+.coin-DYN {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -186px;
+}
+
+.coin-EAZY {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -186px;
+}
+
+.coin-EBCR {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -186px;
+}
+
+.coin-EBS {
+  width: 16px;
+  height: 15px;
+  background-position: -161px -186px;
+}
+
+.coin-ECP {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -186px;
+}
+
+.coin-EDCO {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -186px;
+}
+
+.coin-ELLI {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -186px;
+}
+
+.coin-ELP {
+  width: 16px;
+  height: 17px;
+  background-position: -291px -186px;
+}
+
+.coin-EMRALS {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -186px;
+}
+
+.coin-ENCO {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -186px;
+}
+
+.coin-ENG {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -186px;
+}
+
+.coin-ENT {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -186px;
+}
+
+.coin-EON {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -186px;
+}
+
+.coin-EPIC {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -186px;
+}
+
+.coin-EPR {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -186px;
+}
+
+.coin-ERZ {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -186px;
+}
+
+.coin-ESBC-BRONZE {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -186px;
+}
+
+.coin-ESBC-GOLD {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -186px;
+}
+
+.coin-ESBC-PLATINUM {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -186px;
+}
+
+.coin-ESBC-SILVER {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -212px;
+}
+
+.coin-ESCO {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -212px;
+}
+
+.coin-ESP {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -212px;
+}
+
+.coin-ETHO {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -212px;
+}
+
+.coin-ETHO-SN {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -212px;
+}
+
+.coin-ETZ {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -212px;
+}
+
+.coin-EVOS {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -212px;
+}
+
+.coin-EXCL {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -212px;
+}
+
+.coin-EXO {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -212px;
+}
+
+.coin-EXT {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -212px;
+}
+
+.coin-EXTN {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -212px;
+}
+
+.coin-EXUS {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -212px;
+}
+
+.coin-EXVO {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -212px;
+}
+
+.coin-EZY {
+  width: 12px;
+  height: 16px;
+  background-position: -369px -212px;
+}
+
+.coin-FANS {
+  width: 16px;
+  height: 16px;
+  background-position: -391px -212px;
+}
+
+.coin-FGC {
+  width: 16px;
+  height: 16px;
+  background-position: -417px -212px;
+}
+
+.coin-FIX {
+  width: 16px;
+  height: 16px;
+  background-position: -443px -212px;
+}
+
+.coin-FLK {
+  width: 16px;
+  height: 16px;
+  background-position: -469px -212px;
+}
+
+.coin-FLM {
+  width: 16px;
+  height: 14px;
+  background-position: -495px -212px;
+}
+
+.coin-FLN {
+  width: 16px;
+  height: 16px;
+  background-position: -521px -212px;
+}
+
+.coin-FLX {
+  width: 16px;
+  height: 16px;
+  background-position: -547px -212px;
+}
+
+.coin-FOR {
+  width: 16px;
+  height: 19px;
+  background-position: -573px -212px;
+}
+
+.coin-FOS {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -241px;
+}
+
+.coin-FOX {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -241px;
+}
+
+.coin-FROST {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -241px;
+}
+
+.coin-FTON-T1 {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -241px;
+}
+
+.coin-FTON-T2 {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -241px;
+}
+
+.coin-FTON-T3 {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -241px;
+}
+
+.coin-FXTC {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -241px;
+}
+
+.coin-GAL {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -241px;
+}
+
+.coin-GALI {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -241px;
+}
+
+.coin-GASH {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -241px;
+}
+
+.coin-GBX {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -241px;
+}
+
+.coin-GDNC {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -241px;
+}
+
+.coin-GFR {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -241px;
+}
+
+.coin-GGP {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -241px;
+}
+
+.coin-GIC {
+  width: 14px;
+  height: 16px;
+  background-position: -369px -241px;
+}
+
+.coin-GIN {
+  width: 16px;
+  height: 16px;
+  background-position: -393px -241px;
+}
+
+.coin-GIRO {
+  width: 16px;
+  height: 16px;
+  background-position: -419px -241px;
+}
+
+.coin-GMC {
+  width: 16px;
+  height: 16px;
+  background-position: -445px -241px;
+}
+
+.coin-GNR {
+  width: 16px;
+  height: 16px;
+  background-position: -471px -241px;
+}
+
+.coin-GOSS {
+  width: 16px;
+  height: 16px;
+  background-position: -497px -241px;
+}
+
+.coin-GPKR {
+  width: 16px;
+  height: 16px;
+  background-position: -523px -241px;
+}
+
+.coin-GRON {
+  width: 16px;
+  height: 16px;
+  background-position: -549px -241px;
+}
+
+.coin-GRPH {
+  width: 16px;
+  height: 16px;
+  background-position: -575px -241px;
+}
+
+.coin-GRV {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -267px;
+}
+
+.coin-GTM {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -267px;
+}
+
+.coin-GXX {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -267px;
+}
+
+.coin-H2O {
+  width: 15px;
+  height: 16px;
+  background-position: -83px -267px;
+}
+
+.coin-HALO {
+  width: 16px;
+  height: 16px;
+  background-position: -108px -267px;
+}
+
+.coin-HC {
+  width: 16px;
+  height: 16px;
+  background-position: -134px -267px;
+}
+
+.coin-HEMP {
+  width: 16px;
+  height: 16px;
+  background-position: -160px -267px;
+}
+
+.coin-HERB {
+  width: 16px;
+  height: 16px;
+  background-position: -186px -267px;
+}
+
+.coin-HLD {
+  width: 16px;
+  height: 16px;
+  background-position: -212px -267px;
+}
+
+.coin-HLM {
+  width: 16px;
+  height: 16px;
+  background-position: -238px -267px;
+}
+
+.coin-HLX {
+  width: 16px;
+  height: 16px;
+  background-position: -264px -267px;
+}
+
+.coin-HTH {
+  width: 16px;
+  height: 16px;
+  background-position: -290px -267px;
+}
+
+.coin-HTK {
+  width: 16px;
+  height: 16px;
+  background-position: -316px -267px;
+}
+
+.coin-IAN-TIER1 {
+  width: 16px;
+  height: 16px;
+  background-position: -342px -267px;
+}
+
+.coin-IAN-TIER2 {
+  width: 16px;
+  height: 16px;
+  background-position: -368px -267px;
+}
+
+.coin-IAN-TIER3 {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -267px;
+}
+
+.coin-IC {
+  width: 16px;
+  height: 15px;
+  background-position: -420px -267px;
+}
+
+.coin-ICA {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -267px;
+}
+
+.coin-ICC {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -267px;
+}
+
+.coin-ICE {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -267px;
+}
+
+.coin-IFP {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -267px;
+}
+
+.coin-IFX {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -267px;
+}
+
+.coin-IMC {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -267px;
+}
+
+.coin-IMG {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -293px;
+}
+
+.coin-INGY {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -293px;
+}
+
+.coin-INN {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -293px;
+}
+
+.coin-INSN {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -293px;
+}
+
+.coin-ION {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -293px;
+}
+
+.coin-IPS {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -293px;
+}
+
+.coin-IQ {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -293px;
+}
+
+.coin-ISF {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -293px;
+}
+
+.coin-ITZ {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -293px;
+}
+
+.coin-JEW {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -293px;
+}
+
+.coin-JIYO {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -293px;
+}
+
+.coin-JLG {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -293px;
+}
+
+.coin-KC {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -293px;
+}
+
+.coin-KEC {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -293px;
+}
+
+.coin-KLKS {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -293px;
+}
+
+.coin-KNG {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -293px;
+}
+
+.coin-KOD {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -293px;
+}
+
+.coin-KORE {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -293px;
+}
+
+.coin-KRAIT {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -293px;
+}
+
+.coin-KREDS {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -293px;
+}
+
+.coin-KSOC {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -293px;
+}
+
+.coin-KTS {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -293px;
+}
+
+.coin-KYD {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -293px;
+}
+
+.coin-KZC {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -319px;
+}
+
+.coin-LABX {
+  width: 15px;
+  height: 16px;
+  background-position: -31px -319px;
+}
+
+.coin-LGA {
+  width: 16px;
+  height: 16px;
+  background-position: -56px -319px;
+}
+
+.coin-LGS {
+  width: 16px;
+  height: 16px;
+  background-position: -82px -319px;
+}
+
+.coin-LILI {
+  width: 16px;
+  height: 16px;
+  background-position: -108px -319px;
+}
+
+.coin-LINDA {
+  width: 16px;
+  height: 16px;
+  background-position: -134px -319px;
+}
+
+.coin-LNB {
+  width: 16px;
+  height: 16px;
+  background-position: -160px -319px;
+}
+
+.coin-LNO-T1 {
+  width: 16px;
+  height: 16px;
+  background-position: -186px -319px;
+}
+
+.coin-LNO-T2 {
+  width: 16px;
+  height: 16px;
+  background-position: -212px -319px;
+}
+
+.coin-LNO-T3 {
+  width: 16px;
+  height: 16px;
+  background-position: -238px -319px;
+}
+
+.coin-LOBS {
+  width: 16px;
+  height: 13px;
+  background-position: -264px -319px;
+}
+
+.coin-LOKI {
+  width: 16px;
+  height: 16px;
+  background-position: -290px -319px;
+}
+
+.coin-LON {
+  width: 16px;
+  height: 16px;
+  background-position: -316px -319px;
+}
+
+.coin-LPC {
+  width: 16px;
+  height: 16px;
+  background-position: -342px -319px;
+}
+
+.coin-LRM {
+  width: 16px;
+  height: 16px;
+  background-position: -368px -319px;
+}
+
+.coin-LTX {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -319px;
+}
+
+.coin-LUCKY {
+  width: 16px;
+  height: 16px;
+  background-position: -420px -319px;
+}
+
+.coin-LUQ {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -319px;
+}
+
+.coin-LUX {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -319px;
+}
+
+.coin-LYRA {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -319px;
+}
+
+.coin-MAC {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -319px;
+}
+
+.coin-MAG {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -319px;
+}
+
+.coin-MANO {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -319px;
+}
+
+.coin-MARC {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -345px;
+}
+
+.coin-MBLC {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -345px;
+}
+
+.coin-MBO {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -345px;
+}
+
+.coin-MC {
+  width: 16px;
+  height: 9px;
+  background-position: -83px -345px;
+}
+
+.coin-MCC {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -345px;
+}
+
+.coin-MCPC {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -345px;
+}
+
+.coin-MEDIC {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -345px;
+}
+
+.coin-MEME {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -345px;
+}
+
+.coin-MERI {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -345px;
+}
+
+.coin-MGB {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -345px;
+}
+
+.coin-MGN {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -345px;
+}
+
+.coin-MIDAS {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -345px;
+}
+
+.coin-MMB {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -345px;
+}
+
+.coin-MNBC {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -345px;
+}
+
+.coin-MNDX {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -345px;
+}
+
+.coin-MNEX {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -345px;
+}
+
+.coin-MNPR {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -345px;
+}
+
+.coin-MNT {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -345px;
+}
+
+.coin-MOBI {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -345px;
+}
+
+.coin-MOJO {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -345px;
+}
+
+.coin-MON {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -345px;
+}
+
+.coin-MONK {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -345px;
+}
+
+.coin-MRG {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -345px;
+}
+
+.coin-MRI {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -371px;
+}
+
+.coin-MTAP {
+  width: 16px;
+  height: 11px;
+  background-position: -31px -371px;
+}
+
+.coin-MTI {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -371px;
+}
+
+.coin-MTNC {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -371px;
+}
+
+.coin-MTRIP {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -371px;
+}
+
+.coin-MUE {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -371px;
+}
+
+.coin-MXT {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -371px;
+}
+
+.coin-N2O {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -371px;
+}
+
+.coin-NBX {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -371px;
+}
+
+.coin-NDB {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -371px;
+}
+
+.coin-NDK {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -371px;
+}
+
+.coin-NDO {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -371px;
+}
+
+.coin-NELLA {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -371px;
+}
+
+.coin-NEOS {
+  width: 16px;
+  height: 16px;
+  background-position: -343px -371px;
+}
+
+.coin-NFY {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -371px;
+}
+
+.coin-NIX {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -371px;
+}
+
+.coin-NNC {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -371px;
+}
+
+.coin-NORT {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -371px;
+}
+
+.coin-NOS {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -371px;
+}
+
+.coin-NPW {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -371px;
+}
+
+.coin-NRG {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -371px;
+}
+
+.coin-NTRN {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -371px;
+}
+
+.coin-NXG {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -371px;
+}
+
+.coin-NXTON {
+  width: 15px;
+  height: 16px;
+  background-position: -5px -397px;
+}
+
+.coin-NYEX {
+  width: 16px;
+  height: 16px;
+  background-position: -30px -397px;
+}
+
+.coin-NYX {
+  width: 16px;
+  height: 16px;
+  background-position: -56px -397px;
+}
+
+.coin-NZL {
+  width: 16px;
+  height: 16px;
+  background-position: -82px -397px;
+}
+
+.coin-OASIS {
+  width: 16px;
+  height: 16px;
+  background-position: -108px -397px;
+}
+
+.coin-OHM {
+  width: 16px;
+  height: 16px;
+  background-position: -134px -397px;
+}
+
+.coin-OHMC {
+  width: 16px;
+  height: 16px;
+  background-position: -160px -397px;
+}
+
+.coin-OLMP-1M {
+  width: 16px;
+  height: 16px;
+  background-position: -186px -397px;
+}
+
+.coin-OLMP-2M {
+  width: 16px;
+  height: 16px;
+  background-position: -212px -397px;
+}
+
+.coin-OLMP-3M {
+  width: 16px;
+  height: 16px;
+  background-position: -238px -397px;
+}
+
+.coin-OMEGA {
+  width: 16px;
+  height: 16px;
+  background-position: -264px -397px;
+}
+
+.coin-OPCX {
+  width: 16px;
+  height: 15px;
+  background-position: -290px -397px;
+}
+
+.coin-ORE {
+  width: 16px;
+  height: 16px;
+  background-position: -316px -397px;
+}
+
+.coin-ORYX {
+  width: 16px;
+  height: 16px;
+  background-position: -342px -397px;
+}
+
+.coin-OUR {
+  width: 16px;
+  height: 16px;
+  background-position: -368px -397px;
+}
+
+.coin-OWC {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -397px;
+}
+
+.coin-OWO {
+  width: 16px;
+  height: 16px;
+  background-position: -420px -397px;
+}
+
+.coin-OXID-5K {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -397px;
+}
+
+.coin-P2P {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -397px;
+}
+
+.coin-PAC {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -397px;
+}
+
+.coin-PAR {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -397px;
+}
+
+.coin-PARQ {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -397px;
+}
+
+.coin-PAWS {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -397px;
+}
+
+.coin-PAXEX {
+  width: 16px;
+  height: 12px;
+  background-position: -5px -423px;
+}
+
+.coin-PCR {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -423px;
+}
+
+.coin-PDG {
+  width: 15px;
+  height: 16px;
+  background-position: -57px -423px;
+}
+
+.coin-PDX {
+  width: 16px;
+  height: 16px;
+  background-position: -82px -423px;
+}
+
+.coin-PEG {
+  width: 16px;
+  height: 16px;
+  background-position: -108px -423px;
+}
+
+.coin-PENG {
+  width: 16px;
+  height: 16px;
+  background-position: -134px -423px;
+}
+
+.coin-PEO {
+  width: 16px;
+  height: 16px;
+  background-position: -160px -423px;
+}
+
+.coin-PEPS {
+  width: 16px;
+  height: 16px;
+  background-position: -186px -423px;
+}
+
+.coin-PHC {
+  width: 16px;
+  height: 16px;
+  background-position: -212px -423px;
+}
+
+.coin-PHILS {
+  width: 16px;
+  height: 16px;
+  background-position: -238px -423px;
+}
+
+.coin-PHON-T1 {
+  width: 16px;
+  height: 16px;
+  background-position: -264px -423px;
+}
+
+.coin-PHON-T2 {
+  width: 16px;
+  height: 16px;
+  background-position: -290px -423px;
+}
+
+.coin-PHON-T3 {
+  width: 16px;
+  height: 16px;
+  background-position: -316px -423px;
+}
+
+.coin-PHR {
+  width: 16px;
+  height: 19px;
+  background-position: -342px -423px;
+}
+
+.coin-PIEX {
+  width: 16px;
+  height: 18px;
+  background-position: -368px -423px;
+}
+
+.coin-PIRATE {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -423px;
+}
+
+.coin-PIRL {
+  width: 16px;
+  height: 16px;
+  background-position: -420px -423px;
+}
+
+.coin-PIVX {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -423px;
+}
+
+.coin-PLXS {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -423px;
+}
+
+.coin-PMN {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -423px;
+}
+
+.coin-PND {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -423px;
+}
+
+.coin-PNDM {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -423px;
+}
+
+.coin-PNX {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -423px;
+}
+
+.coin-PNY {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -449px;
+}
+
+.coin-POLIS {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -449px;
+}
+
+.coin-POSW {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -449px;
+}
+
+.coin-PPO {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -449px;
+}
+
+.coin-PRD {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -449px;
+}
+
+.coin-PRJ {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -449px;
+}
+
+.coin-PRJ-T1 {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -449px;
+}
+
+.coin-PRJ-T2 {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -449px;
+}
+
+.coin-PRJ-T3 {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -449px;
+}
+
+.coin-PRTX {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -449px;
+}
+
+.coin-PRUFUS {
+  width: 16px;
+  height: 15px;
+  background-position: -265px -449px;
+}
+
+.coin-PRX {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -449px;
+}
+
+.coin-PSC {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -449px;
+}
+
+.coin-PTG {
+  width: 16px;
+  height: 16px;
+  background-position: -420px -449px;
+}
+
+.coin-PURA {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -449px;
+}
+
+.coin-PYRO {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -449px;
+}
+
+.coin-PZDC {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -449px;
+}
+
+.coin-QNO {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -449px;
+}
+
+.coin-QUAZ {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -449px;
+}
+
+.coin-RACE {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -449px;
+}
+
+.coin-RAGNA {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -475px;
+}
+
+.coin-RCO {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -475px;
+}
+
+.coin-RDCT {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -475px;
+}
+
+.coin-REBL {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -475px;
+}
+
+.coin-RESC {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -475px;
+}
+
+.coin-RESQ {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -475px;
+}
+
+.coin-REVU {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -475px;
+}
+
+.coin-RLD {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -475px;
+}
+
+.coin-RNS {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -475px;
+}
+
+.coin-ROCO {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -475px;
+}
+
+.coin-ROE {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -475px;
+}
+
+.coin-RPD {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -475px;
+}
+
+.coin-RSTR {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -475px;
+}
+
+.coin-RUP {
+  width: 16px;
+  height: 15px;
+  background-position: -343px -475px;
+}
+
+.coin-RUPX {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -475px;
+}
+
+.coin-SAGA {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -475px;
+}
+
+.coin-SAROS {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -475px;
+}
+
+.coin-SATC-BN {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -475px;
+}
+
+.coin-SATC-SN {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -475px;
+}
+
+.coin-SCC {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -475px;
+}
+
+.coin-SCH {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -475px;
+}
+
+.coin-SCN {
+  width: 16px;
+  height: 9px;
+  background-position: -551px -475px;
+}
+
+.coin-SCORE {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -475px;
+}
+
+.coin-SCRIV {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -501px;
+}
+
+.coin-SDD {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -501px;
+}
+
+.coin-SEKO {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -501px;
+}
+
+.coin-SEND {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -501px;
+}
+
+.coin-SGO {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -501px;
+}
+
+.coin-SGS {
+  width: 16px;
+  height: 15px;
+  background-position: -135px -501px;
+}
+
+.coin-SHA {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -501px;
+}
+
+.coin-SHB {
+  width: 16px;
+  height: 8px;
+  background-position: -187px -501px;
+}
+
+.coin-SHMN {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -501px;
+}
+
+.coin-SIB {
+  width: 16px;
+  height: 16px;
+  background-position: -239px -501px;
+}
+
+.coin-SIERRA {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -501px;
+}
+
+.coin-SINS {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -501px;
+}
+
+.coin-SLX {
+  width: 16px;
+  height: 16px;
+  background-position: -317px -501px;
+}
+
+.coin-SMART {
+  width: 14px;
+  height: 16px;
+  background-position: -317px -449px;
+}
+
+.coin-SMGR-L1 {
+  width: 16px;
+  height: 13px;
+  background-position: -343px -501px;
+}
+
+.coin-SMK {
+  width: 16px;
+  height: 16px;
+  background-position: -369px -501px;
+}
+
+.coin-SMM {
+  width: 16px;
+  height: 16px;
+  background-position: -395px -501px;
+}
+
+.coin-SMRT {
+  width: 16px;
+  height: 16px;
+  background-position: -421px -501px;
+}
+
+.coin-SNC {
+  width: 16px;
+  height: 16px;
+  background-position: -447px -501px;
+}
+
+.coin-SNCZ {
+  width: 16px;
+  height: 16px;
+  background-position: -473px -501px;
+}
+
+.coin-SND {
+  width: 16px;
+  height: 16px;
+  background-position: -499px -501px;
+}
+
+.coin-SNO {
+  width: 16px;
+  height: 16px;
+  background-position: -525px -501px;
+}
+
+.coin-SOV {
+  width: 16px;
+  height: 16px;
+  background-position: -551px -501px;
+}
+
+.coin-SPD {
+  width: 16px;
+  height: 16px;
+  background-position: -577px -501px;
+}
+
+.coin-SPDR {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -527px;
+}
+
+.coin-SPHX {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -527px;
+}
+
+.coin-SPK {
+  width: 15px;
+  height: 16px;
+  background-position: -57px -527px;
+}
+
+.coin-SPLB {
+  width: 16px;
+  height: 9px;
+  background-position: -82px -527px;
+}
+
+.coin-SPR {
+  width: 16px;
+  height: 16px;
+  background-position: -108px -527px;
+}
+
+.coin-SSX {
+  width: 16px;
+  height: 16px;
+  background-position: -134px -527px;
+}
+
+.coin-STAK {
+  width: 16px;
+  height: 16px;
+  background-position: -160px -527px;
+}
+
+.coin-STAKE {
+  width: 16px;
+  height: 14px;
+  background-position: -186px -527px;
+}
+
+.coin-STINT {
+  width: 16px;
+  height: 16px;
+  background-position: -212px -527px;
+}
+
+.coin-STM {
+  width: 16px;
+  height: 16px;
+  background-position: -238px -527px;
+}
+
+.coin-STONE {
+  width: 16px;
+  height: 16px;
+  background-position: -264px -527px;
+}
+
+.coin-SUB1X {
+  width: 16px;
+  height: 16px;
+  background-position: -290px -527px;
+}
+
+.coin-SUCR {
+  width: 16px;
+  height: 16px;
+  background-position: -316px -527px;
+}
+
+.coin-SUN {
+  width: 16px;
+  height: 16px;
+  background-position: -342px -527px;
+}
+
+.coin-SWAP {
+  width: 16px;
+  height: 16px;
+  background-position: -368px -527px;
+}
+
+.coin-SWIFT {
+  width: 16px;
+  height: 16px;
+  background-position: -394px -527px;
+}
+
+.coin-SWM {
+  width: 16px;
+  height: 16px;
+  background-position: -420px -527px;
+}
+
+.coin-SYNX {
+  width: 16px;
+  height: 16px;
+  background-position: -446px -527px;
+}
+
+.coin-SYS {
+  width: 16px;
+  height: 16px;
+  background-position: -472px -527px;
+}
+
+.coin-SYZ {
+  width: 16px;
+  height: 16px;
+  background-position: -498px -527px;
+}
+
+.coin-TAL {
+  width: 16px;
+  height: 16px;
+  background-position: -524px -527px;
+}
+
+.coin-TECAX {
+  width: 16px;
+  height: 16px;
+  background-position: -550px -527px;
+}
+
+.coin-TELOS {
+  width: 16px;
+  height: 16px;
+  background-position: -576px -527px;
+}
+
+.coin-TFC {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -553px;
+}
+
+.coin-THC {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -553px;
+}
+
+.coin-TIMEC {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -553px;
+}
+
+.coin-TIT {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -553px;
+}
+
+.coin-TOMO {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -553px;
+}
+
+.coin-TRAID {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -553px;
+}
+
+.coin-TRC {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -553px;
+}
+
+.coin-TRIG {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -553px;
+}
+
+.coin-TRIP {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -553px;
+}
+
+.coin-TRO {
+  width: 14px;
+  height: 16px;
+  background-position: -239px -553px;
+}
+
+.coin-TRP {
+  width: 16px;
+  height: 16px;
+  background-position: -263px -553px;
+}
+
+.coin-TRTT {
+  width: 16px;
+  height: 14px;
+  background-position: -289px -553px;
+}
+
+.coin-TRVC {
+  width: 16px;
+  height: 16px;
+  background-position: -315px -553px;
+}
+
+.coin-TUNE {
+  width: 16px;
+  height: 17px;
+  background-position: -341px -553px;
+}
+
+.coin-TWINS {
+  width: 16px;
+  height: 16px;
+  background-position: -367px -553px;
+}
+
+.coin-TX {
+  width: 16px;
+  height: 16px;
+  background-position: -393px -553px;
+}
+
+.coin-UFY {
+  width: 16px;
+  height: 16px;
+  background-position: -419px -553px;
+}
+
+.coin-ULTRA {
+  width: 16px;
+  height: 16px;
+  background-position: -445px -553px;
+}
+
+.coin-UPC {
+  width: 16px;
+  height: 16px;
+  background-position: -471px -553px;
+}
+
+.coin-USERX {
+  width: 16px;
+  height: 16px;
+  background-position: -497px -553px;
+}
+
+.coin-VECO {
+  width: 16px;
+  height: 16px;
+  background-position: -523px -553px;
+}
+
+.coin-VEN {
+  width: 16px;
+  height: 16px;
+  background-position: -549px -553px;
+}
+
+.coin-VGS {
+  width: 16px;
+  height: 16px;
+  background-position: -575px -553px;
+}
+
+.coin-VIOG {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -579px;
+}
+
+.coin-VITAE {
+  width: 16px;
+  height: 16px;
+  background-position: -31px -579px;
+}
+
+.coin-VIVID {
+  width: 16px;
+  height: 16px;
+  background-position: -57px -579px;
+}
+
+.coin-VIVO {
+  width: 16px;
+  height: 16px;
+  background-position: -83px -579px;
+}
+
+.coin-VNX {
+  width: 16px;
+  height: 16px;
+  background-position: -109px -579px;
+}
+
+.coin-VSX {
+  width: 16px;
+  height: 16px;
+  background-position: -135px -579px;
+}
+
+.coin-VTAR {
+  width: 16px;
+  height: 16px;
+  background-position: -161px -579px;
+}
+
+.coin-VULC {
+  width: 16px;
+  height: 16px;
+  background-position: -187px -579px;
+}
+
+.coin-WABI {
+  width: 16px;
+  height: 16px;
+  background-position: -213px -579px;
+}
+
+.coin-WAGE {
+  width: 16px;
+  height: 19px;
+  background-position: -239px -579px;
+}
+
+.coin-WCF {
+  width: 16px;
+  height: 16px;
+  background-position: -265px -579px;
+}
+
+.coin-WGR {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -579px;
+}
+
+.coin-WIRE {
+  width: 16px;
+  height: 16px;
+  background-position: -367px -579px;
+}
+
+.coin-WOLF {
+  width: 16px;
+  height: 16px;
+  background-position: -393px -579px;
+}
+
+.coin-WORX {
+  width: 16px;
+  height: 16px;
+  background-position: -419px -579px;
+}
+
+.coin-WSP {
+  width: 16px;
+  height: 16px;
+  background-position: -445px -579px;
+}
+
+.coin-WTC {
+  width: 16px;
+  height: 16px;
+  background-position: -471px -579px;
+}
+
+.coin-WVC {
+  width: 16px;
+  height: 16px;
+  background-position: -497px -579px;
+}
+
+.coin-XAP {
+  width: 16px;
+  height: 16px;
+  background-position: -523px -579px;
+}
+
+.coin-XAR {
+  width: 16px;
+  height: 16px;
+  background-position: -549px -579px;
+}
+
+.coin-XBI {
+  width: 16px;
+  height: 16px;
+  background-position: -575px -579px;
+}
+
+.coin-XBR {
+  width: 10px;
+  height: 16px;
+  background-position: -317px -579px;
+}
+
+.coin-XBY {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -5px;
+}
+
+.coin-XCOM {
+  width: 16px;
+  height: 16px;
+  background-position: -600px -31px;
+}
+
+.coin-XCPO {
+  width: 16px;
+  height: 15px;
+  background-position: -600px -57px;
+}
+
+.coin-XCXT {
+  width: 16px;
+  height: 16px;
+  background-position: -600px -82px;
+}
+
+.coin-XCZM {
+  width: 16px;
+  height: 16px;
+  background-position: -601px -108px;
+}
+
+.coin-XDNA-FN {
+  width: 16px;
+  height: 16px;
+  background-position: -601px -134px;
+}
+
+.coin-XDNA-LN {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -160px;
+}
+
+.coin-XDNA-MN {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -186px;
+}
+
+.coin-XFLEA {
+  width: 16px;
+  height: 16px;
+  background-position: -599px -212px;
+}
+
+.coin-XGCS {
+  width: 16px;
+  height: 16px;
+  background-position: -601px -238px;
+}
+
+.coin-XGS {
+  width: 16px;
+  height: 16px;
+  background-position: -602px -264px;
+}
+
+.coin-XHK {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -290px;
+}
+
+.coin-XIND {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -316px;
+}
+
+.coin-XIOS {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -342px;
+}
+
+.coin-XLIB {
+  width: 8px;
+  height: 16px;
+  background-position: -603px -368px;
+}
+
+.coin-XLN {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -394px;
+}
+
+.coin-XLQ {
+  width: 16px;
+  height: 16px;
+  background-position: -602px -420px;
+}
+
+.coin-XLR {
+  width: 16px;
+  height: 15px;
+  background-position: -602px -446px;
+}
+
+.coin-XMCC {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -471px;
+}
+
+.coin-XMX {
+  width: 16px;
+  height: 16px;
+  background-position: -603px -497px;
+}
+
+.coin-XN {
+  width: 14px;
+  height: 16px;
+  background-position: -603px -523px;
+}
+
+.coin-XND {
+  width: 16px;
+  height: 16px;
+  background-position: -602px -549px;
+}
+
+.coin-XORN {
+  width: 16px;
+  height: 16px;
+  background-position: -601px -575px;
+}
+
+.coin-XRH {
+  width: 16px;
+  height: 16px;
+  background-position: -337px -601px;
+}
+
+.coin-XSN {
+  width: 16px;
+  height: 16px;
+  background-position: -601px -601px;
+}
+
+.coin-XUEZ {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -5px;
+}
+
+.coin-XUR {
+  width: 16px;
+  height: 16px;
+  background-position: -626px -31px;
+}
+
+.coin-XXX {
+  width: 16px;
+  height: 16px;
+  background-position: -626px -57px;
+}
+
+.coin-XYLO {
+  width: 16px;
+  height: 16px;
+  background-position: -627px -83px;
+}
+
+.coin-XZC {
+  width: 16px;
+  height: 16px;
+  background-position: -627px -109px;
+}
+
+.coin-XZX {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -135px;
+}
+
+.coin-YCE {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -161px;
+}
+
+.coin-YIC {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -187px;
+}
+
+.coin-YOBA {
+  width: 16px;
+  height: 16px;
+  background-position: -291px -213px;
+}
+
+.coin-YUP {
+  width: 16px;
+  height: 16px;
+  background-position: -627px -213px;
+}
+
+.coin-ZACA {
+  width: 16px;
+  height: 16px;
+  background-position: -628px -239px;
+}
+
+.coin-ZBA {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -265px;
+}
+
+.coin-ZCR {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -291px;
+}
+
+.coin-ZEN-42 {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -317px;
+}
+
+.coin-ZEN-500 {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -343px;
+}
+
+.coin-ZEST {
+  width: 12px;
+  height: 16px;
+  background-position: -629px -369px;
+}
+
+.coin-ZEX {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -395px;
+}
+
+.coin-ZIO {
+  width: 16px;
+  height: 16px;
+  background-position: -628px -421px;
+}
+
+.coin-ZIXX {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -447px;
+}
+
+.coin-ZLX {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -473px;
+}
+
+.coin-ZND {
+  width: 16px;
+  height: 16px;
+  background-position: -629px -499px;
+}
+
+.coin-ZOC {
+  width: 16px;
+  height: 16px;
+  background-position: -628px -525px;
+}
+
+.coin-ZTA {
+  width: 16px;
+  height: 16px;
+  background-position: -628px -551px;
+}
+
+.coin-ZVT {
+  width: 16px;
+  height: 16px;
+  background-position: -627px -577px;
+}
+
+.coin-feirm {
+  width: 16px;
+  height: 16px;
+  background-position: -627px -603px;
+}
+
+.coin-gizer {
+  width: 16px;
+  height: 16px;
+  background-position: -5px -629px;
+}

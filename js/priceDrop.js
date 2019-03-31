@@ -71,7 +71,6 @@ function $drawTable($arr, $type, $ccTotalCount, $BTC_PRICE) { // start
 } // end
 
 function parseTimeLastUpdatet(S) { // CMC UTC TIME (+3 for MSK)
-	console.log(S);
 	var date = S.split('T')[0];
 	S = 'Last update at: ' +date + ' _' + S.split('T')[1].split('.')[0].split(':').slice(0, 2).join(':') + '_ UTC';
 	return S;

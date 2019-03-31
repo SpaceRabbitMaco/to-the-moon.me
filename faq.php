@@ -73,8 +73,9 @@
 	<body>
 		<div id='menu'>
 			<nav>
-				<span><a href='/'>To the Moon</a></span>
+				<span><a href='/'>Moon</a></span>
 				<span><a href='calc.php'>Calc</a></span>
+				<span><a href='nodes.php'>Nodes</a></span>
 				<span><a href='faq.php' class='nav-a-selected'>FAQ</a></span>
 				<span><a href='donate.php'>Donate</a></span>
 			</nav>
@@ -121,6 +122,22 @@
 								Курсы фиатных валют с <a href="https://exchangeratesapi.io/" target="_blank">exchangeratesapi.io</a>
 							</li>
 						</ul>
+
+						<p class="faq-title marg-top-2em">Мониторинг Мастер нод</p>
+						<ul>
+							<li>
+								Данные обновляются раз в 12 часов
+							</li>
+							<li>
+								Данные загружаются с <a href="https://masternodes.online/" target="_blank">masternodes.online</a>, <a href="https://masternodecap.com/" target="_blank">masternodecap.com</a>, <a href="https://mnrank.com/" target="_blank">mnrank.com</a> и <a href="https://masternode.live/" target="_blank">masternode.live</a>
+							</li>
+							<li>
+								Liquidity = Vol24 / Node Price (чем выше, тем лучше)
+							</li>
+							<li>
+								Монеты убираются, если ROI < 20% или Liqudity < 1 (или неизвестно)
+							</li>
+						</ul>
 					</div>
 
 					<div class="faq-div faq-div-right marg-bot-2em">
@@ -157,6 +174,22 @@
 							</li>
 							<li>
 								Fiat rates from <a href="https://exchangeratesapi.io/" target="_blank">exchangeratesapi.io</a>
+							</li>
+						</ul>
+
+						<p class="faq-title marg-top-2em">Masternodes monitoring</p>
+						<ul>
+							<li>
+							Data is updated automatically every 12 hours
+							</li>
+							<li>
+							All information is downloaded from <a href="https://masternodes.online/" target="_blank">masternodes.online</a>, <a href="https://masternodecap.com/" target="_blank">masternodecap.com</a>, <a href="https://mnrank.com/" target="_blank">mnrank.com</a> and <a href="https://masternode.live/" target="_blank">masternode.live</a>
+							</li>
+							<li>
+								Liqudity = Vol24 / Node Price (the higher the better)
+							</li>
+							<li>
+								Coins are removed if  ROI < 20% or Liquidity < 1 (or unknown)
 							</li>
 						</ul>
 					</div>
