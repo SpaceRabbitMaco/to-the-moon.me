@@ -15,6 +15,10 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>http://to-the-moon.me/nodes.php</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>http://to-the-moon.me/faq.php</loc>
   <changefreq>weekly</changefreq>
 </url>

@@ -16,7 +16,7 @@
 		
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@SpaceRabbitMaco" />
-		<meta name="twitter:title" content="To-the-moon | Calculator" />
+		<meta name="twitter:title" content="Cryptocurrency Converter Calculator" />
 		<meta name="twitter:description" content="Cryptocurrency converter calculator tool, helps to convert popular cryptocurrency, also a price tracker" />
 		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta name="twitter:image:alt" content="Moon" />

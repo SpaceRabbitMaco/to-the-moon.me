@@ -325,6 +325,10 @@ div#bottom-fixed {
   width: 100%;
 }
 
+.table-td2 {
+  min-width: 15rem;
+}
+
 .table-th1 {
   display: none;
 }
@@ -354,6 +358,17 @@ div#bottom-fixed {
 }
 .table-td6 {
   display: none;
+}
+
+@media (max-width: 600px) {
+  #main-div-cc-cc1h {
+    padding: 0.5em !important;
+  }
+}
+@media (max-width: 480px) {
+  #main-div-cc-cc1h {
+    padding: 0 !important;
+  }
 }
 
 @media (max-width: 770px) {

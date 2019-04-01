@@ -15,7 +15,7 @@
 		
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@SpaceRabbitMaco" />
-		<meta name="twitter:title" content="Donate | To-the-moon" />
+		<meta name="twitter:title" content="Donate" />
 		<meta name="twitter:description" content="Cryptocurrency price drop tracker, helps to buy cryptocurrency cheaper" />
 		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta name="twitter:image:alt" content="Moon" />

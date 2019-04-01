@@ -60,13 +60,13 @@ function getSortedArr(ccObj) {
 function setLiqudityStyle(value) {
   let result = "";
   if (parseFloat(value) >= 50) {
-    result = '<td class="td-liqudity td-liqudity-super">';
+    result = '<td class="td-liqudity td-liqudity-super table-td4">';
   } else if (parseFloat(value) >= 30 && parseFloat(value) < 50) {
-    result = '<td class="td-liqudity td-liqudity-high">';
+    result = '<td class="td-liqudity td-liqudity-high table-td4">';
   } else if (parseFloat(value) >= 10 && parseFloat(value) < 30) {
-    result = '<td class="td-liqudity td-liqudity-mid">';
+    result = '<td class="td-liqudity td-liqudity-mid table-td4">';
   } else {
-    result = '<td class="td-liqudity td-liqudity-low">';
+    result = '<td class="td-liqudity td-liqudity-low table-td4">';
   }
   return result;
 }
@@ -120,14 +120,14 @@ function drawNodesTable(ccArr, marker) {
     let Liqudity = setLiqudityStyle(el.Liqudity);
     let img = getCCImg(el);
 
-    html += `<tr><td>${img}<a target="_blank" href="${el.Link}">${
+    html += `<tr><td class="table-td1">${img}<a target="_blank" href="${el.Link}">${
       el.CCName
     }</a></td>
-    <td>${el.CCTicker}</td>
-    <td>${el.ROI.split(".")[0]} %</td>
+    <td class="table-td2">${el.CCTicker}</td>
+    <td class="table-td3">${el.ROI.split(".")[0]} %</td>
     ${Liqudity + el.Liqudity}</td>
-    <td>$ ${el.NodePrice}</td>
-    <td class="td-nodes-count">${el.Nodes}</td></tr>`;
+    <td class="table-td5">$ ${el.NodePrice}</td>
+    <td class="td-nodes-count table-td6">${el.Nodes}</td></tr>`;
   });
 
   html += `</table>`;

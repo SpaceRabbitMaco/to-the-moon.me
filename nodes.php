@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cryptocurrency master nodes tracker | To-the-moon</title>
+		<title>Cryptocurrency Masternodes tracker | To-the-moon</title>
 
 		<!-- ___META___(START)___ -->
 		<meta charset="utf-8">
@@ -10,13 +10,13 @@
 		<meta name="keywords" content="masternodes tracker, masternodes, masternodes analyze, cryptocurrency, поиск мастернод, мастерноды, анализ мастернод, криптовалюты" />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="https://to-the-moon.me/img/moon_3.jpg" />
-		<meta property="og:title" content="Masternodes tracker | To-the-moon" />
+		<meta property="og:title" content="Cryptocurrency Masternodes tracker | To-the-moon" />
 		<meta name="description" content="Masternodes tracker, helps to find good masternodes" />
 		<meta property="og:description" content="Masternodes tracker, helps to find good masternodes" />
 
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@SpaceRabbitMaco" />
-		<meta name="twitter:title" content="Masternodes tracker" />
+		<meta name="twitter:title" content="Cryptocurrency Masternodes tracker" />
 		<meta name="twitter:description" content="Masternodes tracker, helps to find good masternodes" />
 		<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 		<meta name="twitter:image:alt" content="Moon" />
