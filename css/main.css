@@ -361,12 +361,16 @@ div#bottom-fixed {
 }
 
 @media (max-width: 600px) {
-  #main-div-cc-cc1h {
+  #main-div-cc-cc1h,
+  #main-div-cc-cc24h,
+  #main-div-cc-cc1d {
     padding: 0.5em !important;
   }
 }
 @media (max-width: 480px) {
-  #main-div-cc-cc1h {
+  #main-div-cc-cc1h,
+  #main-div-cc-cc24h,
+  #main-div-cc-cc1d {
     padding: 0 !important;
   }
 }
