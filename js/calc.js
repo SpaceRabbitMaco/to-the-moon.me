@@ -253,7 +253,7 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
       switch (value.id) {
         // LIST OF __CC__ INPUTS
         case "input-BTC":
-          $("#input-BTC")[0].value = $CC_to_BTCeqv.toFixed(8);
+          $("#input-BTC")[0].value = $CC_to_BTCeqv.toFixed(9);
           break;
         case "input-ETH":
           $("#input-ETH")[0].value = calcCoinEqv($CC_to_BTCeqv, "ETH");

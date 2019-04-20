@@ -79,6 +79,7 @@
 				<span><a href='/' class='nav-a-selected'>Moon</a></span>
 				<span><a href='calc.php'>Calc</a></span>
 				<span><a href='nodes.php'>Nodes</a></span>
+				<span><a href='analyzer.php'>Analyzer</a></span>
 				<span><a href='faq.php'>FAQ</a></span>
 				<span><a href='donate.php'>Donate</a></span>
 			</nav>
