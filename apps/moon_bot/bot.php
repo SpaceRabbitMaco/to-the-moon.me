@@ -12,7 +12,7 @@ $my_msg = 'testing msg';
 // INIT __END__
 
 if (isset($_GET['send_cc_upd'])) {
-    $telegram = new Api('481150088:AAEkvgPCtIRUZRubXpW2JMl9hgXHUuylNvI');
+    $telegram = new Api($API_KEY);
     $telegram->sendMessage([ 'chat_id' => $my_chat_id, 'parse_mode'=> 'HTML', 'text' => $my_msg ]);
 }
 else {   
