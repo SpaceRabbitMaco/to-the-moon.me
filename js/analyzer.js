@@ -12,7 +12,8 @@ const drawTable = function(arr) {
   let html = `<span id="coins-count"><u>Coins</u>: ${
     arr.length
   } | <u>Total coins</u>: ${
-    ALL_DATA['data'].length}</span><table class="base-table"><tr>
+    ALL_DATA["data"].length
+  }</span><table class="base-table"><tr>
         <th class="table-a-th1">Name</th>
         <th class="table-a-th2">Symbol</th>
         <th class="table-a-th3">Max Supply</th>
@@ -82,7 +83,9 @@ const drawTable = function(arr) {
         <td class="table-a-td6">${platform}</td>
         <td class="table-a-td7"><a target="_blank" href="https://coinmarketcap.com/currencies/${
           el.slug
-        }/#markets">${el.quote.USD.price.toFixed(6)}</a></td>
+        }/#markets">${
+      el.quote.USD.price === null ? null : el.quote.USD.price.toFixed(6)
+    }</a></td>
         <td class="table-a-td8">${coinPriceSat}</td>
         <td class="table-a-td9">${el.date_added.split("T")[0]}</td>
         </tr>`;
