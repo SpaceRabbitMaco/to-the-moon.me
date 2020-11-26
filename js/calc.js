@@ -98,7 +98,7 @@ function calcCoinEqv(inputBTCeqv, coin) {
     case "GBP":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.GBP).toFixed(6);
     case "KRW":
-      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.KRW).toFixed(4);
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.KRW).toFixed(2);
     case "JPY":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.JPY).toFixed(2);
     case "BRL":
@@ -109,6 +109,25 @@ function calcCoinEqv(inputBTCeqv, coin) {
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.PLN).toFixed(4);
     case "ZAR":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.ZAR).toFixed(4);
+
+    case "AUD":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.AUD).toFixed(4);
+    case "CAD":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.CAD).toFixed(4);
+    case "NZD":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.NZD).toFixed(4);
+    case "SGD":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.SGD).toFixed(4);
+
+    case "CHF":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.CHF).toFixed(4);
+    case "MXN":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.MXN).toFixed(4);
+    case "INR":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.INR).toFixed(4);
+    case "IDR":
+      return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.IDR).toFixed(1);
+
     default:
   }
 }
@@ -163,7 +182,26 @@ function calcCoinEqvInput(inputValue, coin) {
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.PLN);
     case "ZAR":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.ZAR);
-    default:
+
+    case "AUD":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.AUD);
+    case "CAD":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.CAD);
+    case "NZD":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.NZD);
+    case "SGD":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.SGD);
+
+    case "CHF":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.CHF);
+    case "MXN":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.MXN);
+    case "INR":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.INR);
+    case "IDR":
+      return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.IDR);
+    
+      default:
   }
 }
 
@@ -325,6 +363,31 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
           break;
         case "input-ZAR":
           $("#input-ZAR")[0].value = calcCoinEqv($CC_to_BTCeqv, "ZAR");
+        
+        case "input-AUD":
+          $("#input-AUD")[0].value = calcCoinEqv($CC_to_BTCeqv, "AUD");
+          break;
+        case "input-CAD":
+          $("#input-CAD")[0].value = calcCoinEqv($CC_to_BTCeqv, "CAD");
+          break;
+        case "input-NZD":
+          $("#input-NZD")[0].value = calcCoinEqv($CC_to_BTCeqv, "NZD");
+          break;
+        case "input-SGD":
+          $("#input-SGD")[0].value = calcCoinEqv($CC_to_BTCeqv, "SGD");
+        
+        case "input-CHF":
+          $("#input-CHF")[0].value = calcCoinEqv($CC_to_BTCeqv, "CHF");
+          break;
+        case "input-MXN":
+          $("#input-MXN")[0].value = calcCoinEqv($CC_to_BTCeqv, "MXN");
+          break;
+        case "input-INR":
+          $("#input-INR")[0].value = calcCoinEqv($CC_to_BTCeqv, "INR");
+          break;
+        case "input-IDR":
+          $("#input-IDR")[0].value = calcCoinEqv($CC_to_BTCeqv, "IDR");
+
           break;
       }
     }
@@ -355,58 +418,3 @@ function appINIT() {
   });
 }
 // ------------------------------------------
-
-// NEW FUNCTIONS AND NEW VARS FOR PROFIT CALC
-// NEED REANABLE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//
-// var BTC_was = document.getElementById('new-btc-was');
-// var BTC_now = document.getElementById('new-btc-now');
-// var BTC_profit = document.getElementById('new-btc-profit-sat');
-// var BTC_profit_prnt = document.getElementById('new-btc-profit-prnt');
-// var BTC_profit_x = document.getElementById('new-btc-profit-x');
-// var CC_list;
-// var CC_names_list = [];
-//
-// var printSelect = function(cc_names, select_id) {
-// 	var target_element = document.getElementById(select_id);
-// 	target_element = $(target_element);
-// 	$.each(cc_names, function(index, value) {
-// 		var id = value.split('###')[1];
-// 		value = value.split('###')[0];
-// 		target_element.append('<option value="'+id+'">'+value+'</option>');
-// 	});
-// };
-//
-// var init = function(data) {
-// 	data = $(data);
-// 	$.each(data, function(index, value) {
-// 		if (value.name.length > 16) { value.name = value.name.substr(0, 16) + '...'; }
-// 		CC_names_list.push(value.name + ' (' + value.symbol +')###' + value.id);
-// 	});
-// 	printSelect(CC_names_list, 'select-cc-was');
-// 	printSelect(CC_names_list, 'select-cc-now');
-// };
-//
-// var calcProfit = function() {
-// 	if ( BTC_was.value == '' || BTC_now.value == '') { return; }
-//
-// 	BTC_profit.value = (BTC_now.value - BTC_was.value).toFixed(8);
-// 	BTC_profit_prnt.value = (((BTC_now.value /BTC_was.value) * 100) - 100).toFixed(1);
-// 	BTC_profit_x.value = (BTC_now.value /BTC_was.value).toFixed(1);
-// };
-//
-// var initF = function() {
-// 	$.ajax({
-// 		url: 'https://api.coinmarketcap.com/v1/ticker/?&limit=0',
-// 		dataType : "json",
-// 		success: function (data, textStatus) {
-// 			CC_list = $(data);
-// 			init(CC_list);
-// 		}
-// 	});
-// };
-//
-// $( function() { initF(); });
-//
-// BTC_was.oninput = function() { calcProfit(); };
-// BTC_now.oninput = function() { calcProfit(); };
