@@ -111,7 +111,6 @@
       <nav>
         <span><a href="/">Moon</a></span>
         <span><a href="calc.php" class="nav-a-selected">Calc</a></span>
-        <span><a href="nodes.php">Nodes</a></span>
         <span><a href='analyzer.php'>Analyzer</a></span>
         <span><a href="faq.php">FAQ</a></span>
         <span><a href="donate.php">Donate</a></span>
