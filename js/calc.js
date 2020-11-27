@@ -109,7 +109,6 @@ function calcCoinEqv(inputBTCeqv, coin) {
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.PLN).toFixed(4);
     case "ZAR":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.ZAR).toFixed(4);
-
     case "AUD":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.AUD).toFixed(4);
     case "CAD":
@@ -118,7 +117,6 @@ function calcCoinEqv(inputBTCeqv, coin) {
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.NZD).toFixed(4);
     case "SGD":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.SGD).toFixed(4);
-
     case "CHF":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.CHF).toFixed(4);
     case "MXN":
@@ -127,7 +125,6 @@ function calcCoinEqv(inputBTCeqv, coin) {
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.INR).toFixed(4);
     case "IDR":
       return (inputBTCeqv * ALL_RATES.usdBTC * FIAT_RATES.rates.IDR).toFixed(1);
-
     default:
   }
 }
@@ -182,7 +179,6 @@ function calcCoinEqvInput(inputValue, coin) {
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.PLN);
     case "ZAR":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.ZAR);
-
     case "AUD":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.AUD);
     case "CAD":
@@ -191,7 +187,6 @@ function calcCoinEqvInput(inputValue, coin) {
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.NZD);
     case "SGD":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.SGD);
-
     case "CHF":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.CHF);
     case "MXN":
@@ -200,7 +195,6 @@ function calcCoinEqvInput(inputValue, coin) {
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.INR);
     case "IDR":
       return inputValue / (ALL_RATES.usdBTC * FIAT_RATES.rates.IDR);
-    
       default:
   }
 }
@@ -363,7 +357,6 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
           break;
         case "input-ZAR":
           $("#input-ZAR")[0].value = calcCoinEqv($CC_to_BTCeqv, "ZAR");
-        
         case "input-AUD":
           $("#input-AUD")[0].value = calcCoinEqv($CC_to_BTCeqv, "AUD");
           break;
@@ -375,7 +368,6 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
           break;
         case "input-SGD":
           $("#input-SGD")[0].value = calcCoinEqv($CC_to_BTCeqv, "SGD");
-        
         case "input-CHF":
           $("#input-CHF")[0].value = calcCoinEqv($CC_to_BTCeqv, "CHF");
           break;
@@ -387,7 +379,6 @@ function calculateAndSet($CC_to_BTCeqv, $CC) {
           break;
         case "input-IDR":
           $("#input-IDR")[0].value = calcCoinEqv($CC_to_BTCeqv, "IDR");
-
           break;
       }
     }
