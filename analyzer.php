@@ -176,37 +176,11 @@
                 <option value="None">None</option>
                 <option value="Ethereum">Ethereum</option>
                 <option value="Binance Coin">Binance Coin</option>
-                <option value="VeChain">VeChain</option>
-                <option value="RSK Smart Bitcoin">RSK Smart Bitcoin</option>
-                <option value="Omni">Omni</option>
-                <option value="Stellar">Stellar</option>
-                <option value="v.systems">v.systems</option>
-                <option value="XRP">XRP</option>
-                <option value="EtherTRONeum">TRON</option>
-                <option value="Qtum">Qtum</option>
+                <option value="TRON">TRON</option>
                 <option value="Neo">Neo</option>
-                <option value="Waves">Waves</option>
                 <option value="EOS">EOS</option>
-                <option value="Ardor">Ardor</option>
-                <option value="NULS">NULS</option>
-                <option value="NEM">NEM</option>
-                <option value="BitShares">BitShares</option>
-                <option value="Bitcoin Cash">Bitcoin Cash</option>
-                <option value="Cosmos">Cosmos</option>
-                <option value="INT Chain">INT Chain</option>
-                <option value="NuBits">NuBits</option>
-                <option value="Komodo">Komodo</option>
-                <option value="Ubiq">Ubiq</option>
-                <option value="Counterparty">Counterparty</option>
-                <option value="PIVX">PIVX</option>
-                <option value="ICON">ICON</option>
-                <option value="Ontology">Ontology</option>
-                <option value="GXChain">GXChain</option>
-                <option value="Wanchain">Wanchain</option>
-                <option value="VITE">VITE</option>
                 <option value="IOST">IOST</option>
-                <option value="Yocoin">Yocoin</option>
-                <option value="TrueChain">TrueChain</option>
+                <option value="Chiliz">Chiliz</option>
               </select>
             </div>
           </div>
