@@ -8,6 +8,10 @@ const clearAll = function() {
   $("#result").html("");
 };
 
+const algos = ['sha-256', 'ethash', 'scrypt', 'x11', 'equihash', 'blake256', 'blake2b', 'sha-512', 'lyra2re', 'x13', 'mimble-wimble', 'quark', 'cryptonight', 'groestl', 'cryptonight-lite', 'neoscrypt', 'argon2', 'xevan', 'hmq1725', 'x15', 'yescript', 'x11gost', 'scrypt-n', 'dagger-hashimoto', 'blake', 'm7-pow', 'blake2s', 'x14', 'qubit', 'nist5'];
+
+const proofTypes = ['pow', 'hybrid-pow-pos', 'poi', 'pos', 'lpos', 'dpos', 'hybrid-dpow-pow', 'poc', 'tpos', 'hybrid-pow-npos', 'hybrid-pos-lpos', 'dpor', 'pos-30', 'hybrid-pos-pop', 'powt', 'pop', 'post'];
+
 const drawTable = function(arr) {
   let html = `<span id="coins-count"><u>Coins</u>: ${
     arr.length
@@ -15,78 +19,125 @@ const drawTable = function(arr) {
     ALL_DATA["data"].length
   }</span><table class="base-table"><tr>
         <th class="table-a-th1">Name</th>
-        <th class="table-a-th2">Symbol</th>
-        <th class="table-a-th3">Max Supply</th>
-        <th class="table-a-th4">Circulating Supply</th>
+        <th class="table-a-th3">Total Supply</th>
+        <th class="table-a-th4">Tags</th>
         <th class="table-a-th5"><i class="fas fa-gem"></i></th>
         <th class="table-a-th6">Platform</th>
-        <th class="table-a-th7">Price $</th>
-        <th class="table-a-th8">Price (sat.)</th>
+        <th class="table-a-th7">Price</th>
         <th class="table-a-th9">Date add</th>
         </tr>`;
 
   arr.forEach(el => {
     let isMineable;
-    let platform;
+    isMineable = el.tags.includes("mineable");
+
+    let coinSymbol = el.symbol;
+    let coinPlatform;
+    let platformLink;
     let coinPriceSat;
-    let coinCircSupl = el.circulating_supply;
-    let coinMaxSupl = el.max_supply;
     let coinName = el.name;
+    let coinTotaleSupl = el.total_supply;
+    let coinTags = el.tags;
+
+    if (coinTotaleSupl == null) {
+      coinTotaleSupl = "Null";
+    } else {
+      coinTotaleSupl = coinTotaleSupl.toFixed(0);
+      coinTotaleSupl = coinTotaleSupl.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
 
     if (coinName.length > 17) {
       coinName = coinName.substr(0, 17) + "...";
     }
 
-    if (coinCircSupl == null) {
-      coinMaxSupl == "Null";
-    } else {
-      coinCircSupl = coinCircSupl.toFixed(0);
-    }
-
-    if (coinMaxSupl == null) {
-      coinMaxSupl == "Null";
-    } else {
-      coinMaxSupl = coinMaxSupl.toFixed(0);
+    if (coinSymbol.length > 5) {
+      coinSymbol = coinSymbol.substr(0, 5) + "...";
     }
 
     coinPriceSat = (
       (el.quote.USD.price * 100000000) /
       ALL_DATA["data"][0].quote.USD.price
-    ).toFixed(2);
+    ).toFixed(0);
 
-    if (el.platform === null) {
-      platform = "None";
+    if (coinPriceSat > 1019900) {
+      coinPriceSat = (coinPriceSat/100000000).toFixed(4);
+      coinPriceSat += ' <i class="fab fa-btc"></i>'
     } else {
-      platform = el.platform.name;
+      coinPriceSat += ' sat.'
     }
 
-    if (el.tags.length == 1) {
-      isMineable = true;
+    if (el.platform == null) {
+      coinPlatform = "None";
+      platformLink = "";
     } else {
-      isMineable = false;
+      let platformHREF = '';
+
+      switch (el.platform.name) {
+        case "Ethereum":
+          platformHREF = 'https://etherscan.io/token/' + el.platform.token_address;
+          break;
+        case "Binance Coin":
+          platformHREF = 'https://explorer.binance.org/asset/' + el.platform.token_address;
+          break;
+        case "TRON":
+          platformHREF = 'https://tronscan.org/#/token/' + el.platform.token_address;
+          if (el.platform.token_address.length > 10) {
+            platformHREF = 'https://tronscan.org/#/contract/' + el.platform.token_address;
+          }
+          break;
+        case "Neo":
+          platformHREF = 'https://neotracker.io/contract/' + el.platform.token_address;
+          if (el.platform.token_address.length > 40) {
+            platformHREF = 'https://neotracker.io/asset/' + el.platform.token_address;
+          }
+          break;
+        case "EOS":
+          platformHREF = 'https://eosflare.io/account/' + el.platform.token_address;
+          break;
+        case "Chiliz":
+          platformHREF = 'https://explorer.chiliz.com/tokens/' + el.platform.token_address;;
+          break;
+        default:
+          break;
+      }
+
+      coinPlatform = el.platform.name;
+
+      platformLink = `<a href="${platformHREF}" target="_blank"><i class="fas fa-cogs"></i></a>`;
+      if (coinPlatform == 'IOST') {
+        platformLink = '<i class="fas fa-cogs"></i>';
+      }
     }
 
     html += `<tr>
-             <td class="table-a-td1"><img src="https://s2.coinmarketcap.com/static/img/coins/16x16/${
-               el.id
-             }.png" height="16" width="16"><a target="_blank" href="https://coinmarketcap.com/currencies/${
+            <td class="table-a-td1"><img src="https://s2.coinmarketcap.com/static/img/coins/16x16/${
+              el.id
+            }.png" height="16" width="16"><a target="_blank" href="https://coinmarketcap.com/currencies/${
       el.slug
-    }/">${coinName}</a></td>
-        <td class="table-a-td2">${el.symbol}</td>
-        <td class="table-a-td3">${el.max_supply}</td>
-        <td class="table-a-td4">${coinCircSupl}</td>
+    }/">${coinName} (${coinSymbol})</a></td>
+        <td class="table-a-td3">${coinTotaleSupl}</td>
+        <td class="table-a-td4">
+        ${Object.keys(coinTags).map(function (key) {
+          let tagClass = '';
+          tagClass = algos.includes(coinTags[key]) ? 'coin-tag-algo' : 'coin-tag';
+          if (proofTypes.includes(coinTags[key])) {
+            tagClass = 'coin-tag-ptype';
+          }
+
+          return `<span class='${tagClass}'>`+"<i class='fas fa-tag'></i> "+coinTags[key]+"</span>"           
+        }).join(' ')}
+        </td>
         <td class="table-a-td5">${
           isMineable
-            ? '<i style="color:green;" class="fas fa-gem"></i>'
-            : '<i style="color:red;" class="fas fa-gem"></i>'
+            ? '<i style="color:#27AE60;" class="fas fa-gem"></i>'
+            : '<i style="color:#cccccc;" class="fas fa-gem"></i>'
         }</td>
-        <td class="table-a-td6">${platform}</td>
+        <td class="table-a-td6">${coinPlatform} ${platformLink}</td>
         <td class="table-a-td7"><a target="_blank" href="https://coinmarketcap.com/currencies/${
           el.slug
-        }/#markets">${
-      el.quote.USD.price === null ? null : el.quote.USD.price.toFixed(6)
-    }</a></td>
-        <td class="table-a-td8">${coinPriceSat}</td>
+        }/#markets">$${
+      el.quote.USD.price === null ? null : el.quote.USD.price.toFixed(4)
+    }</a><br><span class="coin-sat-price">${coinPriceSat}</span></td>
         <td class="table-a-td9">${el.date_added.split("T")[0]}</td>
         </tr>`;
   });
@@ -128,64 +179,32 @@ const priceLessCheck = function(el, priceLess) {
   }
 };
 
-const maxMoreCheck = function(el, maxMore) {
-  if (maxMore == "") {
+const totalMoreCheck = function(el, totalMore) {
+  if (totalMore == "") {
     return true;
   }
 
-  if (el.max_supply == null) {
+  if (el.total_supply == null) {
     return false;
   }
 
-  if (el.max_supply > maxMore) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const maxLessCheck = function(el, maxLess) {
-  if (maxLess == "") {
-    return true;
-  }
-
-  if (el.max_supply == null) {
-    return false;
-  }
-
-  if (el.max_supply < maxLess) {
+  if (el.total_supply > totalMore) {
     return true;
   } else {
     return false;
   }
 };
 
-const circMoreCheck = function(el, circMore) {
-  if (circMore == "") {
+const totalLessCheck = function(el, totalLess) {
+  if (totalLess == "") {
     return true;
   }
 
-  if (el.circulating_supply == null) {
+  if (el.total_supply == null) {
     return false;
   }
 
-  if (el.circulating_supply > circMore) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const circLessCheck = function(el, circLess) {
-  if (circLess == "") {
-    return true;
-  }
-
-  if (el.circulating_supply == null) {
-    return false;
-  }
-
-  if (el.circulating_supply < circLess) {
+  if (el.total_supply < totalLess) {
     return true;
   } else {
     return false;
@@ -216,6 +235,86 @@ const platformCheck = function(el, platform) {
   }
 };
 
+const feachureCheck = function(el, feachure) {
+  if (feachure == "") {
+    return true;
+  }
+
+  if (feachure == "Any") {
+    return true;
+  }
+
+  if (el.tags.includes(feachure)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const techCheck = function(el, tech) {
+  if (tech == "") {
+    return true;
+  }
+
+  if (tech == "Any") {
+    return true;
+  }
+
+  if (el.tags.includes(tech)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const bfieldCheck = function(el, bfield) {
+  if (bfield == "") {
+    return true;
+  }
+
+  if (bfield == "Any") {
+    return true;
+  }
+
+  if (el.tags.includes(bfield)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const proofCheck = function(el, proof) {
+  if (proof == "") {
+    return true;
+  }
+
+  if (proof == "Any") {
+    return true;
+  }
+
+  if (el.tags.includes(proof)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const algoCheck = function(el, algo) {
+  if (algo == "") {
+    return true;
+  }
+
+  if (algo == "Any Algo") {
+    return true;
+  }
+
+  if (el.tags.includes(algo)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 const isMineableCheck = function(el, isMineable) {
   if (isMineable == "") {
     return true;
@@ -224,7 +323,7 @@ const isMineableCheck = function(el, isMineable) {
   let result;
   let isMine;
 
-  if (el.tags.length == 1) {
+  if (el.tags.includes("mineable")) {
     isMine = true;
   } else {
     isMine = false;
@@ -271,11 +370,14 @@ const analyze = function(
   platform,
   priceMore,
   priceLess,
-  maxMore,
-  maxLess,
-  circMore,
-  circLess,
-  date
+  totalMore,
+  totalLess,
+  date,
+  algo,
+  proof,
+  bfield,
+  tech,
+  feachure
 ) {
   let result = [];
 
@@ -284,32 +386,41 @@ const analyze = function(
       ptfCheck,
       prcMoreCheck,
       prcLessCheck,
-      mxMoreCheck,
-      mxLessCheck,
-      crcMoreCheck,
-      crcLessCheck,
-      datCheck;
+      toMoreCheck,
+      toLessCheck,
+      datCheck,
+      alCheck,
+      prCheck,
+      bfCheck,
+      teCheck,
+      feCheck;
 
     isMCheck = isMineableCheck(el, isMineable);
     ptfCheck = platformCheck(el, platform);
     prcMoreCheck = priceMoreCheck(el, priceMore);
     prcLessCheck = priceLessCheck(el, priceLess);
-    mxMoreCheck = maxMoreCheck(el, maxMore);
-    mxLessCheck = maxLessCheck(el, maxLess);
-    crcMoreCheck = circMoreCheck(el, circMore);
-    crcLessCheck = circLessCheck(el, circLess);
+    toMoreCheck = totalMoreCheck(el, totalMore);
+    toLessCheck = totalLessCheck(el, totalLess);
     datCheck = dateCheck(el, date);
+    alCheck = algoCheck(el, algo);
+    prCheck = proofCheck(el, proof);
+    bfCheck = bfieldCheck(el, bfield);
+    teCheck = techCheck(el, tech);
+    feCheck = feachureCheck(el, feachure)
 
     if (
       isMCheck &&
       ptfCheck &&
       prcMoreCheck &&
       prcLessCheck &&
-      mxMoreCheck &&
-      mxLessCheck &&
-      crcMoreCheck &&
-      crcLessCheck &&
-      datCheck
+      toMoreCheck &&
+      toLessCheck &&
+      datCheck &&
+      alCheck &&
+      prCheck &&
+      bfCheck &&
+      teCheck &&
+      feCheck
     ) {
       result.push(el);
     }
@@ -325,13 +436,17 @@ const makeAlalyze = function() {
   let priceMore = document.querySelector("#a-price-more").value;
   let priceLess = document.querySelector("#a-price-less").value;
 
-  let maxMore = document.querySelector("#a-max-more").value;
-  let maxLess = document.querySelector("#a-max-less").value;
-
-  let circMore = document.querySelector("#a-circ-more").value;
-  let circLess = document.querySelector("#a-circ-less").value;
+  let totalMore = document.querySelector("#a-total-more").value;
+  let totalLess = document.querySelector("#a-total-less").value;
 
   let date = document.querySelector("#a-add-from").value;
+  let algo = document.querySelector("#a-algo").value;
+
+  let proof = document.querySelector("#a-proof").value;
+  let bfield = document.querySelector("#a-bfield").value;
+
+  let tech = document.querySelector("#a-tech").value;
+  let feachure = document.querySelector("#a-feachures").value;
 
   fitCoins = analyze(
     ALL_DATA,
@@ -339,11 +454,14 @@ const makeAlalyze = function() {
     platform,
     priceMore,
     priceLess,
-    maxMore,
-    maxLess,
-    circMore,
-    circLess,
-    date
+    totalMore,
+    totalLess,
+    date,
+    algo,
+    proof,
+    bfield,
+    tech,
+    feachure
   );
   drawTable(fitCoins);
 };

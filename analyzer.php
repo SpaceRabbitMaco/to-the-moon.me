@@ -115,13 +115,13 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Max Supply</label>
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Total Supply</label>
             <div class="col-5">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text">More than</div>
                 </div>
-                <input type="number" class="form-control a-input" id="a-max-more" autocomplete="off" />
+                <input type="number" class="form-control a-input" id="a-total-more" autocomplete="off" />
               </div>
             </div>
             <div class="col-5">
@@ -129,27 +129,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text">Less than</div>
                 </div>
-                <input type="number" class="form-control a-input" id="a-max-less" autocomplete="off" />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Circulating Supply</label>
-            <div class="col-5">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">More than</div>
-                </div>
-                <input type="number" class="form-control a-input" id="a-circ-more" autocomplete="off" />
-              </div>
-            </div>
-            <div class="col-5">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">Less than</div>
-                </div>
-                <input type="number" class="form-control a-input" id="a-circ-less" autocomplete="off" />
+                <input type="number" class="form-control a-input" id="a-total-less" autocomplete="off" />
               </div>
             </div>
           </div>
@@ -169,7 +149,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Platform</label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Platform <i class="fas fa-cogs"></i></label>
             <div class="col-sm-5">
               <select class="custom-select a-input" id="a-platform">
                 <option value="Any Platform" selected>Any Platform</option>
@@ -186,13 +166,203 @@
           </div>
 
           <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Mineable — <i style="vertical-align: middle;" class="fas fa-gem"></i></label>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Mineable <i style="vertical-align: middle;" class="fas fa-gem"></i></label>
             <div class="col-sm-5">
               <select class="custom-select a-input" id="a-mineable">
                 <option value="Any" selected>Any</option>
                 <option value="Mineable">Mineable</option>
                 <option value="Not Mineable">Not Mineable</option>
               </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Tags <i class='fas fa-tag'></i></label>
+            <div class="col-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text input-group-text-date">Algo</div>
+                </div>
+                <select class="custom-select a-input" id="a-algo">
+                  <option value="Any Algo" selected>Any Algo</option>
+                  <option value="sha-256">SHA-256</option>
+                  <option value="ethash">Ethash</option>
+                  <option value="scrypt">Scrypt</option>
+                  <option value="x11">X11</option>
+                  <option value="equihash">Equihash</option>
+                  <option value="blake256">Blake256</option>
+                  <option value="blake2b">Blake2b</option>
+                  <option value="sha-512">SHA-512</option>
+                  <option value="lyra2re">Lyra2re</option>
+                  <option value="x13">X13</option>
+                  <option value="mimble-wimble">MimbleWimble</option>
+                  <option value="quark">Quark</option>
+                  <option value="cryptonight">CryptoNight</option>
+                  <option value="groestl">Groestl</option>
+                  <option value="cryptonight-lite">CryptoNight Lite</option>
+                  <option value="neoscrypt">NeoScrypt</option>
+                  <option value="argon2">Argon2</option>
+                  <option value="xevan">Xevan</option>
+                  <option value="hmq1725">HMQ1725</option>
+                  <option value="x15">X15</option>
+                  <option value="yescript">Yescript</option>
+                  <option value="x11gost">X11 Gost</option>
+                  <option value="scrypt-n">Scrypt-N</option>
+                  <option value="dagger-hashimoto">Dagger-Hashimoto</option>
+                  <option value="blake">Blake</option>
+                  <option value="m7-pow">M7 POW</option>
+                  <option value="blake2s">BLAKE2s</option>
+                  <option value="x14">X14</option>
+                  <option value="qubit">Qubit</option>
+                  <option value="nist5">NIST5</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Proof type</div>
+                </div>
+                <select class="custom-select a-input" id="a-proof">
+                  <option value="Any" selected>Any</option>
+                  <option value="pow">PoW</option>
+                  <option value="pos">PoS</option>
+                  <option value="hybrid-pow-pos">Hybrid PoW/PoS</option>
+                  <option value="hybrid-pow-npos">Hybrid PoW/nPoS</option>
+                  <option value="hybrid-pos-lpos">Hybrid PoS/lPoS</option>
+                  <option value="hybrid-pos-pop">Hybrid PoS/PoP</option>
+                  <option value="hybrid-dpow-pow">Hybrid dPoW/PoW</option>
+                  <option value="poi">PoI</option>
+                  <option value="lpos">lPoS</option>
+                  <option value="dpos">dPoS</option>
+                  <option value="poc">PoC</option>
+                  <option value="tpos">tPoS</option>
+                  <option value="dpor">dPoR</option>
+                  <option value="powt">PoWt</option>
+                  <option value="pop">PoP</option>
+                  <option value="post">PoSt</option>
+                  <option value="pos-30">PoS 3.0</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Tags <i class='fas fa-tag'></i></label>
+            <div class="col-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Bussines</div>
+                </div>
+                <select class="custom-select a-input" id="a-bfield">
+                  <option value="Any" selected>Any</option>
+                  <option value="payments">Payments</option>
+                  <option value="crowdfunding">Crowdfunding</option>
+                  <option value="marketplace">Marketplace</option>
+                  <option value="oracles">Oracles</option>
+                  <option value="defi">DeFi</option>
+                  <option value="filesharing">File Sharing</option>
+                  <option value="logistics">Logistics</option>
+                  <option value="sharing-economy">Sharing Economy</option>
+                  <option value="content-creation">Content Creation</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="centralized-exchange">Centralized Exchange</option>
+                  <option value="decentralized-exchange">Decentralized Exchange</option>
+                  <option value="derivatives">Derivatives</option>
+                  <option value="reputation">Reputation</option>
+                  <option value="identity">Identity</option>
+                  <option value="prediction-markets">Prediction Markets</option>
+                  <option value="gaming">Gaming</option>
+                  <option value="sports">Sports</option>
+                  <option value="health">Health</option>
+                  <option value="energy">Energy</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="gambling">Gambling</option>
+                  <option value="search-engine">Search Engine</option>
+                  <option value="loyalty">Loyalty</option>
+                  <option value="transport">Transport</option>
+                  <option value="real-estate">Real Estate</option>
+                  <option value="e-commerce">E-commerce</option>
+                  <option value="retail">Retail</option>
+                  <option value="commodities">Commodities</option>
+                  <option value="crowdsourcing">Crowdsourcing</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="jobs">Jobs</option>
+                  <option value="education">Education</option>
+                  <option value="events">Events</option>
+                  <option value="music">Music</option>
+                  <option value="art">Art</option>
+                  <option value="adult">Adult</option>
+                  <option value="philanthropy">Philanthropy</option>
+                  <option value="food-beverage">Food Beverage</option>
+                  <option value="agriculture">Agriculture</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Feachures</div>
+                </div>
+                <select class="custom-select a-input" id="a-feachures">
+                  <option value="Any" selected>Any</option>
+                  <option value="privacy">Privacy</option>
+                  <option value="store-of-value">Store of Value</option>
+                  <option value="enterprise-solutions">Enterprise Solutions</option>
+                  <option value="medium-of-exchange">Medium of Exchange</option>
+                  <option value="research">Research</option>
+                  <option value="mobile">Mobile</option>
+                  <option value="media">Media</option>
+                  <option value="discount-token">Discount Token</option>
+                  <option value="data-provenance">Data Provenance</option>
+                  <option value="interoperability">Interoperability</option>
+                  <option value="memes">Memes</option>
+                  <option value="multiple-algorithms">Multiple Algorithms</option>
+                  <option value="services">Services</option>
+                  <option value="geospatial-services">Geospatial Services</option>
+                  <option value="video">Video</option>
+                  <option value="stablecoin-algorithmically-stabilized">Stablecoin Algorithmically Stabilized</option>
+                  <option value="stablecoin-asset-backed">Stablecoin Asset Backed</option>
+                  <option value="stablecoin">Stablecoin</option>
+                  <option value="wallet">Wallet</option>
+                  <option value="technology">Technology</option>
+                  <option value="asset-management">Asset Management</option>
+                  <option value="hardware">Hardware</option>
+                  <option value="staking">Staking</option>
+                  <option value="scaling">Scaling</option>
+                  <option value="escrow">Escrow</option>
+                  <option value="posign">Posign</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Tags <i class='fas fa-tag'></i></label>
+            <div class="col-5">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text input-group-text-date">Tech</div>
+                </div>
+                <select class="custom-select a-input" id="a-tech">
+                  <option value="Any" selected>Any</option>
+                  <option value="masternodes">Masternodes</option>
+                  <option value="ringct">RingCT</option>
+                  <option value="atomic-swaps">Atomic Swaps</option>
+                  <option value="dapp">DApp</option>
+                  <option value="vr-ar">VR/AR</option>
+                  <option value="iot">IoT</option>
+                  <option value="ai-big-data">AI/Big data</option>
+                  <option value="distributed-computing">Distributed Computing</option>
+                  <option value="zero-knowledge-proofs">Zero-knowledge proofs</option>
+                  <option value="state-channels">State Channels</option>
+                  <option value="smart-contracts">Smart Contracts</option>
+                  <option value="dag">DAG</option>
+                  <option value="collectibles-nfts">Collectibles NFTs</option>
+                  <option value="quantum-resistant">Quantum Resistant</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -222,17 +392,6 @@
     <span id="bottom-CMC">All data from
       <a href="https://coinmarketcap.com/" target="_blank">CMC</a></span>
   </div>
-
-  <script type="text/javascript">
-    // $(function() {
-    //   startPriceDrop(true); // initialising
-
-    //   var $timerID = setInterval(function() {
-    //     // set interval for information refresh
-    //     startPriceDrop(false);
-    //   }, 3600000);
-    // });
-  </script>
 </body>
 
 <script>
