@@ -36,6 +36,10 @@ table {
   margin-bottom: 2em !important;
 }
 
+th {
+  text-align: center;
+}
+
 .table-a-th2,
 .table-a-td2,
 .table-a-th8,
@@ -100,6 +104,7 @@ div#bottom-fixed {
 }
 .table-a-th3 {
   display: none;
+  white-space: nowrap;
 }
 .table-a-td3 {
   display: none;
