@@ -20,6 +20,9 @@ body {
   background: rgba(158, 158, 158, 0.7);
   background-image: url("../img/ep_naturalblack.png");
 }
+nav {
+  text-align: center;
+}
 /* ___BASE_SELECTORS___(END)___ */
 
 /* ___UNIVERSAL_SELECTORS___(START)___ */

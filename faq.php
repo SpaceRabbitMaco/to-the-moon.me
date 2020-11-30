@@ -34,48 +34,17 @@
 
 	<!-- ___JS___(START)___ -->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/send_mail.js"></script>
 	<!-- ___JS___(END)___ -->
-
-	<!-- Yandex.Metrika counter -->
-	<!-- <script type="text/javascript" >
-		    (function (d, w, c) {
-		        (w[c] = w[c] || []).push(function() {
-		            try {
-		                w.yaCounter46115568 = new Ya.Metrika({
-		                    id:46115568,
-		                    clickmap:true,
-		                    trackLinks:true,
-		                    accurateTrackBounce:true
-		                });
-		            } catch(e) { }
-		        });
-
-		        var n = d.getElementsByTagName("script")[0],
-		            s = d.createElement("script"),
-		            f = function () { n.parentNode.insertBefore(s, n); };
-		        s.type = "text/javascript";
-		        s.async = true;
-		        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-		        if (w.opera == "[object Opera]") {
-		            d.addEventListener("DOMContentLoaded", f, false);
-		        } else { f(); }
-		    })(document, window, "yandex_metrika_callbacks");
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/46115568" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
-	<!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
 	<div id='menu'>
 		<nav>
-			<span><a href='/'>Moon</a></span>
-			<span><a href='calc.php'>Calc</a></span>
+			<span><a href='/'>Calc</a></span>
 			<span><a href='analyzer.php'>Analyzer</a></span>
 			<span><a href='faq.php' class='nav-a-selected'>FAQ</a></span>
 			<span><a href='donate.php'>Donate</a></span>
