@@ -57,29 +57,6 @@
 				<h1>FAQ</h1>
 
 				<div class="faq-div faq-div-left marg-bot-2em">
-					<p class="faq-title">Мониторинг монет</p>
-					<ul>
-						<li>
-							Монеты убираются, если выполнено любое из условий:
-						</li>
-						<ul>
-							<li>Обьем рынка менее 4 млн. долларов</li>
-							<li>Обьем рынка неизвестен ("?" на CMC)</li>
-							<li>Нет падения хотя бы:</li>
-							<ul>
-								<li>На 5% за час</li>
-								<li>На 15% за сутки</li>
-								<li>На 25% за семь дней</li>
-							</ul>
-						</ul>
-						<li>
-							Данные обновляются автоматически каждые 20 минут
-						</li>
-						<li>
-							Вся информация загружается с <a href='https://coinmarketcap.com/all/views/all/' target='_blank'>coinmarketcap.com</a>
-						</li>
-					</ul>
-
 					<p class="faq-title marg-top-2em">Калькулятор Криптовалют</p>
 					<ul>
 						<li>
@@ -96,28 +73,6 @@
 				</div>
 
 				<div class="faq-div faq-div-right marg-bot-2em">
-					<p class="faq-title">Coin monitoring</p>
-					<ul>
-						<li>
-							Coins are removed if any of the following conditions are true:
-						</li>
-						<ul>
-							<li>The Market Cap is less than 4 million dollars</li>
-							<li>The Market Cap is unknown ("?" on CMC)</li>
-							<li>No drop at least:</li>
-							<ul>
-								<li>At 5% per hour</li>
-								<li>At 15% per day</li>
-								<li>25% over seven days</li>
-							</ul>
-						</ul>
-						<li>
-							Data is updated automatically every 20 minutes
-						</li>
-						<li>
-							All information is downloaded from the <a href='https://coinmarketcap.com/all/views/all/' target='_blank'>coinmarketcap.com</a>
-						</li>
-					</ul>
 
 					<p class="faq-title marg-top-2em">Cryptocurrency Calculator</p>
 					<ul>
