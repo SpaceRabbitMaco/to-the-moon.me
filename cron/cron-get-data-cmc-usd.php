@@ -60,8 +60,13 @@ function getAllDataFromCMC()
 	$data = curl_exec($ch);
 	curl_close($ch);
 
-	$data = json_decode($data, true);
-	return $data;
+	if ($data['status']['credit_count'] == 0) {
+		getAllDataFromCMC();
+		return;
+	} else {
+		$data = json_decode($data, true);
+		return $data;
+	}
 }
 
 function getUSDRates()
