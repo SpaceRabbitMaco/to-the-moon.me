@@ -60,7 +60,7 @@
 					<p class="faq-title marg-top-2em">Калькулятор Криптовалют</p>
 					<ul>
 						<li>
-							Данные обновляются каждые 20 минут
+							Данные обновляются каждые 180 минут
 						</li>
 						<li>
 							Last update зависит от данных, которые приходят от <a href="https://coinmarketcap.com" target="_blank">coinmarketcap.com</a>
@@ -77,7 +77,7 @@
 					<p class="faq-title marg-top-2em">Cryptocurrency Calculator</p>
 					<ul>
 						<li>
-							Data is updated automatically every 20 minutes
+							Data is updated automatically every 180 minutes
 						</li>
 						<li>
 							Last update depends on the data, that comes from the <a href="https://coinmarketcap.com" target="_blank">coinmarketcap.com</a>
