@@ -81,12 +81,23 @@ function getUSDRates()
 
 function getDataINIT()
 {
-	// $topCC= array();
-	// $change1hArr = array();
-	// $change24hArr = array();
-	// $change7dArr = array();
-
 	$allDataCMC = getAllDataFromCMC();
+
+	if ($allDataCMC['status']['credit_count'] === 0) {
+		sleep(1000);
+		$allDataCMC = getAllDataFromCMC();
+
+		if ($allDataCMC['status']['credit_count'] === 0) {
+			sleep(1000);
+			$allDataCMC = getAllDataFromCMC();
+
+			if ($allDataCMC['status']['credit_count'] === 0) {
+				sleep(1000);
+				$allDataCMC = getAllDataFromCMC();
+			}
+		}
+	}
+
 	writeJSON2File('/saved_data/all_data.json', $allDataCMC);
 	priceDropAlalytics($allDataCMC['data']);
 
@@ -107,12 +118,5 @@ $topCC = array();
 $change1hArr = array();
 $change24hArr = array();
 $change7dArr = array();
-
-// $allDataCMC = getAllDataFromCMC();
-// writeJSON2File('./saved_data/all_data.json', $allDataCMC);
-// priceDropAlalytics($allDataCMC['data']);
-//
-// $USDRates = getUSDRates();
-// writeJSON2File('./saved_data/usd_rates.json', $USDRates);
 
 getDataINIT();
