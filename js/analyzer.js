@@ -77,7 +77,14 @@ const drawTable = function(arr) {
           platformHREF = 'https://etherscan.io/token/' + el.platform.token_address;
           break;
         case "Binance Coin":
+
+          0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
           platformHREF = 'https://explorer.binance.org/asset/' + el.platform.token_address;
+          
+          if (el.platform.token_address.length == 42) {
+            platformHREF = 'https://explorer.binance.org/smart/address/' + el.platform.token_address;
+          }
+
           break;
         case "TRON":
           platformHREF = 'https://tronscan.org/#/token/' + el.platform.token_address;
