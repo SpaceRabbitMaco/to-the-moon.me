@@ -27,11 +27,11 @@
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
   <link href="css/all_views_all.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="css/analyzer.css" rel="stylesheet" type="text/css" />
   <link href="css/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <!-- ___CSS___(END)___ -->
@@ -50,12 +50,12 @@
 </head>
 
 <body>
-  <div id="menu">
+  <div id='menu'>
     <nav>
-      <span><a href="/">Calc</a></span>
-      <span><a href="analyzer.php" class="nav-a-selected">Analyzer</a></span>
-      <span><a href="faq.php">FAQ</a></span>
-      <span><a href="donate.php">Donate</a></span>
+      <span><a href='/'>Calc</a></span>
+      <span><a href='analyzer.php' class='nav-a-selected'>Analyzer</a></span>
+      <span><a href='info.php'>Info</a></span>
+      <span><a href='donate.php'>Donate</a></span>
     </nav>
   </div>
 

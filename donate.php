@@ -41,34 +41,6 @@
 		<script src="js/send_mail.js"></script>
 		<!-- ___JS___(END)___ -->
 
-		<!-- Yandex.Metrika counter -->
-		<!-- <script type="text/javascript" >
-		    (function (d, w, c) {
-		        (w[c] = w[c] || []).push(function() {
-		            try {
-		                w.yaCounter46115568 = new Ya.Metrika({
-		                    id:46115568,
-		                    clickmap:true,
-		                    trackLinks:true,
-		                    accurateTrackBounce:true
-		                });
-		            } catch(e) { }
-		        });
-
-		        var n = d.getElementsByTagName("script")[0],
-		            s = d.createElement("script"),
-		            f = function () { n.parentNode.insertBefore(s, n); };
-		        s.type = "text/javascript";
-		        s.async = true;
-		        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-		        if (w.opera == "[object Opera]") {
-		            d.addEventListener("DOMContentLoaded", f, false);
-		        } else { f(); }
-		    })(document, window, "yandex_metrika_callbacks");
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/46115568" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
-		<!-- /Yandex.Metrika counter -->
 	</head>
 
 	<body>
@@ -76,7 +48,7 @@
 			<nav>
 				<span><a href='/'>Calc</a></span>
 				<span><a href='analyzer.php'>Analyzer</a></span>
-				<span><a href='faq.php'>FAQ</a></span>
+				<span><a href='Info.php'>Info</a></span>
 				<span><a href='donate.php'  class='nav-a-selected'>Donate</a></span>
 			</nav>
 		</div>

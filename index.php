@@ -50,7 +50,7 @@
     <nav>
       <span><a href="calc.php" class="nav-a-selected">Calc</a></span>
       <span><a href='analyzer.php'>Analyzer</a></span>
-      <span><a href="faq.php">FAQ</a></span>
+      <span><a href="info.php">Info</a></span>
       <span><a href="donate.php">Donate</a></span>
     </nav>
   </div>
@@ -111,8 +111,6 @@
 
         <div class="starter-template" style="padding-top:2em;padding-bottom:0.5em">
           <!-- starter-template -->
-
-          <!-- <h2 class="test"><span class="test-span">Crypto</span></h2> -->
 
           <h1 class="one"><span>Crypto</span></h1>
 

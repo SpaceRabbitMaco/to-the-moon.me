@@ -1,0 +1,111 @@
+li {
+  list-style: none;
+  line-height: 1.4em;
+  margin-bottom: 0.2rem;
+}
+li.info-calc::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f1ec";
+  color: #7fb3d5;
+  padding-right: 0.3em;
+}
+li.info-news::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f09e";
+  color: #7fb3d5;
+  padding-right: 0.3em;
+}
+li.info-info-info::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f05a";
+  color: #7fb3d5;
+  padding-right: 0.3em;
+}
+li.info-youtube::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f144";
+  color: #7fb3d5;
+  padding-right: 0.3em;
+}
+li.info-ru::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f158";
+  color: #7fb3d5;
+  padding-right: 0.3em;
+}
+
+
+
+#table-faq {
+  font-size: 1.2em;
+}
+
+.info-info {
+  background: #e5e7e9;
+  padding: 0.1rem;
+  border-radius: 0.4rem;
+  padding-left: 0.5rem;
+  color: gray;
+  padding-right: 0.5rem;
+}
+.info-arrow {
+  color: gray;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+a:hover {
+  text-decoration: none;
+}
+
+div.faq-div {
+  font-size: 1.2em;
+  width: 49%;
+}
+div.faq-div p.faq-title {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+div.faq-div p.faq-text {
+  font-weight: bold;
+  margin-top: 0 !important;
+}
+
+div.faq-div-left {
+  width: inherit;
+}
+div.faq-div-right {
+  width: inherit;
+}
+@media (max-width: 989px) {
+  div.faq-div-left {
+    width: inherit;
+  }
+}
+@media (min-width: 990px) {
+  div.faq-div-left {
+    float: left;
+  }
+}
+@media (max-width: 989px) {
+  div.faq-div-right {
+    width: inherit;
+  }
+}
+@media (min-width: 990px) {
+  div.faq-div-right {
+    float: right;
+    width: 49%;
+  }
+}
