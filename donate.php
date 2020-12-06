@@ -48,7 +48,7 @@
 			<nav>
 				<span><a href='/'>Calc</a></span>
 				<span><a href='analyzer.php'>Analyzer</a></span>
-				<span><a href='Info.php'>Info</a></span>
+				<span><a href='info.php'>Info</a></span>
 				<span><a href='donate.php'  class='nav-a-selected'>Donate</a></span>
 			</nav>
 		</div>
