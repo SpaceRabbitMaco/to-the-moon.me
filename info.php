@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@SpaceRabbitMaco" />
-	<meta name="twitter:title" content="FAQ" />
+	<meta name="twitter:title" content="Info | To-the-moon" />
 	<meta name="twitter:description" content="Information about Cryptocurrency, Mining Calculators, Tools, BTC, ETH, ETC" />
 	<meta name="twitter:image" content="https://to-the-moon.me/img/moon_3.jpg" />
 	<meta name="twitter:image:alt" content="Moon" />
