@@ -7,23 +7,19 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://to-the-moon.me/</loc>
+  <loc>https://to-the-moon.me/</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://to-the-moon.me/nodes.php</loc>
+  <loc>https://to-the-moon.me/analyzer.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://to-the-moon.me/analyzer.php</loc>
+  <loc>https://to-the-moon.me/info.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://to-the-moon.me/faq.php</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://to-the-moon.me/donate.php</loc>
+  <loc>https://to-the-moon.me/donate.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>
