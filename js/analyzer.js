@@ -1,23 +1,68 @@
 const ALL_DATA = getJSONData("./saved_data/all_data.json");
 
-const clearAll = function() {
+const clearAll = function () {
   let imputs = document.querySelectorAll(".a-input");
-  imputs.forEach(el => {
+  imputs.forEach((el) => {
     el.value = "";
   });
   $("#result").html("");
 };
 
-const algos = ['sha-256', 'ethash', 'scrypt', 'x11', 'equihash', 'blake256', 'blake2b', 'sha-512', 'lyra2re', 'x13', 'mimble-wimble', 'quark', 'cryptonight', 'groestl', 'cryptonight-lite', 'neoscrypt', 'argon2', 'xevan', 'hmq1725', 'x15', 'yescript', 'x11gost', 'scrypt-n', 'dagger-hashimoto', 'blake', 'm7-pow', 'blake2s', 'x14', 'qubit', 'nist5'];
+const algos = [
+  "sha-256",
+  "ethash",
+  "scrypt",
+  "x11",
+  "equihash",
+  "blake256",
+  "blake2b",
+  "sha-512",
+  "lyra2re",
+  "x13",
+  "mimble-wimble",
+  "quark",
+  "cryptonight",
+  "groestl",
+  "cryptonight-lite",
+  "neoscrypt",
+  "argon2",
+  "xevan",
+  "hmq1725",
+  "x15",
+  "yescript",
+  "x11gost",
+  "scrypt-n",
+  "dagger-hashimoto",
+  "blake",
+  "m7-pow",
+  "blake2s",
+  "x14",
+  "qubit",
+  "nist5",
+];
 
-const proofTypes = ['pow', 'hybrid-pow-pos', 'poi', 'pos', 'lpos', 'dpos', 'hybrid-dpow-pow', 'poc', 'tpos', 'hybrid-pow-npos', 'hybrid-pos-lpos', 'dpor', 'pos-30', 'hybrid-pos-pop', 'powt', 'pop', 'post'];
+const proofTypes = [
+  "pow",
+  "hybrid-pow-pos",
+  "poi",
+  "pos",
+  "lpos",
+  "dpos",
+  "hybrid-dpow-pow",
+  "poc",
+  "tpos",
+  "hybrid-pow-npos",
+  "hybrid-pos-lpos",
+  "dpor",
+  "pos-30",
+  "hybrid-pos-pop",
+  "powt",
+  "pop",
+  "post",
+];
 
-const drawTable = function(arr) {
-  let html = `<span id="coins-count"><u>Coins</u>: ${
-    arr.length
-  } | <u>Total coins</u>: ${
-    ALL_DATA["data"].length
-  }</span><table class="base-table"><tr>
+const drawTable = function (arr) {
+  let html = `<span id="coins-count"><u>Coins</u>: ${arr.length} | <u>Total coins</u>: ${ALL_DATA["data"].length}</span><table class="base-table"><tr>
         <th class="table-a-th1">Name</th>
         <th class="table-a-th3">Total Supply</th>
         <th class="table-a-th4">Tags</th>
@@ -27,7 +72,7 @@ const drawTable = function(arr) {
         <th class="table-a-th9">Date add</th>
         </tr>`;
 
-  arr.forEach(el => {
+  arr.forEach((el) => {
     let isMineable;
     isMineable = el.tags.includes("mineable");
 
@@ -60,50 +105,57 @@ const drawTable = function(arr) {
     ).toFixed(0);
 
     if (coinPriceSat > 1019900) {
-      coinPriceSat = (coinPriceSat/100000000).toFixed(4);
-      coinPriceSat += ' <i class="fab fa-btc"></i>'
+      coinPriceSat = (coinPriceSat / 100000000).toFixed(4);
+      coinPriceSat += ' <i class="fab fa-btc"></i>';
     } else {
-      coinPriceSat += ' sat.'
+      coinPriceSat += " sat.";
     }
 
     if (el.platform == null) {
       coinPlatform = "None";
       platformLink = "";
     } else {
-      let platformHREF = '';
+      let platformHREF = "";
 
       switch (el.platform.name) {
         case "Ethereum":
-          platformHREF = 'https://etherscan.io/token/' + el.platform.token_address;
+          platformHREF =
+            "https://etherscan.io/token/" + el.platform.token_address;
           break;
-        case "Binance Coin":
 
-          0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c
-          platformHREF = 'https://explorer.binance.org/asset/' + el.platform.token_address;
-          
-          if (el.platform.token_address.length == 42) {
-            platformHREF = 'https://explorer.binance.org/smart/address/' + el.platform.token_address;
-          }
-
+        case "Binance Smart Chain":
+          platformHREF =
+            "https://bscscan.com/token/" + el.platform.token_address;
           break;
+
         case "TRON":
-          platformHREF = 'https://tronscan.org/#/token/' + el.platform.token_address;
+          platformHREF =
+            "https://tronscan.org/#/token/" + el.platform.token_address;
           if (el.platform.token_address.length > 10) {
-            platformHREF = 'https://tronscan.org/#/contract/' + el.platform.token_address;
+            platformHREF =
+              "https://tronscan.org/#/contract/" + el.platform.token_address;
           }
           break;
+
         case "Neo":
-          platformHREF = 'https://neotracker.io/contract/' + el.platform.token_address;
+          platformHREF =
+            "https://neotracker.io/contract/" + el.platform.token_address;
           if (el.platform.token_address.length > 40) {
-            platformHREF = 'https://neotracker.io/asset/' + el.platform.token_address;
+            platformHREF =
+              "https://neotracker.io/asset/" + el.platform.token_address;
           }
           break;
+
         case "EOS":
-          platformHREF = 'https://eosflare.io/account/' + el.platform.token_address;
+          platformHREF =
+            "https://eosflare.io/account/" + el.platform.token_address;
           break;
+
         case "Chiliz":
-          platformHREF = 'https://explorer.chiliz.com/tokens/' + el.platform.token_address;;
+          platformHREF =
+            "https://explorer.chiliz.com/tokens/" + el.platform.token_address;
           break;
+
         default:
           break;
       }
@@ -111,7 +163,7 @@ const drawTable = function(arr) {
       coinPlatform = el.platform.name;
 
       platformLink = `<a href="${platformHREF}" target="_blank"><i class="fas fa-cogs"></i></a>`;
-      if (coinPlatform == 'IOST') {
+      if (coinPlatform == "IOST") {
         platformLink = '<i class="fas fa-cogs"></i>';
       }
     }
@@ -124,15 +176,24 @@ const drawTable = function(arr) {
     }/">${coinName} (${coinSymbol})</a></td>
         <td class="table-a-td3">${coinTotaleSupl}</td>
         <td class="table-a-td4">
-        ${Object.keys(coinTags).map(function (key) {
-          let tagClass = '';
-          tagClass = algos.includes(coinTags[key]) ? 'coin-tag-algo' : 'coin-tag';
-          if (proofTypes.includes(coinTags[key])) {
-            tagClass = 'coin-tag-ptype';
-          }
+        ${Object.keys(coinTags)
+          .map(function (key) {
+            let tagClass = "";
+            tagClass = algos.includes(coinTags[key])
+              ? "coin-tag-algo"
+              : "coin-tag";
+            if (proofTypes.includes(coinTags[key])) {
+              tagClass = "coin-tag-ptype";
+            }
 
-          return `<span class='${tagClass}'>`+"<i class='fas fa-tag'></i> "+coinTags[key]+"</span>"           
-        }).join(' ')}
+            return (
+              `<span class='${tagClass}'>` +
+              "<i class='fas fa-tag'></i> " +
+              coinTags[key] +
+              "</span>"
+            );
+          })
+          .join(" ")}
         </td>
         <td class="table-a-td5">${
           isMineable
@@ -152,7 +213,7 @@ const drawTable = function(arr) {
   $("#result").html(html);
 };
 
-const priceMoreCheck = function(el, priceMore) {
+const priceMoreCheck = function (el, priceMore) {
   if (priceMore == "") {
     return true;
   }
@@ -169,7 +230,7 @@ const priceMoreCheck = function(el, priceMore) {
   }
 };
 
-const priceLessCheck = function(el, priceLess) {
+const priceLessCheck = function (el, priceLess) {
   if (priceLess == "") {
     return true;
   }
@@ -186,7 +247,7 @@ const priceLessCheck = function(el, priceLess) {
   }
 };
 
-const totalMoreCheck = function(el, totalMore) {
+const totalMoreCheck = function (el, totalMore) {
   if (totalMore == "") {
     return true;
   }
@@ -202,7 +263,7 @@ const totalMoreCheck = function(el, totalMore) {
   }
 };
 
-const totalLessCheck = function(el, totalLess) {
+const totalLessCheck = function (el, totalLess) {
   if (totalLess == "") {
     return true;
   }
@@ -218,7 +279,7 @@ const totalLessCheck = function(el, totalLess) {
   }
 };
 
-const platformCheck = function(el, platform) {
+const platformCheck = function (el, platform) {
   if (platform == "") {
     return true;
   }
@@ -242,7 +303,7 @@ const platformCheck = function(el, platform) {
   }
 };
 
-const feachureCheck = function(el, feachure) {
+const feachureCheck = function (el, feachure) {
   if (feachure == "") {
     return true;
   }
@@ -258,7 +319,7 @@ const feachureCheck = function(el, feachure) {
   }
 };
 
-const techCheck = function(el, tech) {
+const techCheck = function (el, tech) {
   if (tech == "") {
     return true;
   }
@@ -274,7 +335,7 @@ const techCheck = function(el, tech) {
   }
 };
 
-const bfieldCheck = function(el, bfield) {
+const bfieldCheck = function (el, bfield) {
   if (bfield == "") {
     return true;
   }
@@ -290,7 +351,7 @@ const bfieldCheck = function(el, bfield) {
   }
 };
 
-const proofCheck = function(el, proof) {
+const proofCheck = function (el, proof) {
   if (proof == "") {
     return true;
   }
@@ -306,7 +367,7 @@ const proofCheck = function(el, proof) {
   }
 };
 
-const algoCheck = function(el, algo) {
+const algoCheck = function (el, algo) {
   if (algo == "") {
     return true;
   }
@@ -322,7 +383,7 @@ const algoCheck = function(el, algo) {
   }
 };
 
-const isMineableCheck = function(el, isMineable) {
+const isMineableCheck = function (el, isMineable) {
   if (isMineable == "") {
     return true;
   }
@@ -354,7 +415,7 @@ const isMineableCheck = function(el, isMineable) {
   return result;
 };
 
-const dateCheck = function(el, date) {
+const dateCheck = function (el, date) {
   if (date == "") {
     return true;
   }
@@ -371,7 +432,7 @@ const dateCheck = function(el, date) {
   }
 };
 
-const analyze = function(
+const analyze = function (
   arr,
   isMineable,
   platform,
@@ -388,7 +449,7 @@ const analyze = function(
 ) {
   let result = [];
 
-  arr["data"].forEach(el => {
+  arr["data"].forEach((el) => {
     let isMCheck,
       ptfCheck,
       prcMoreCheck,
@@ -413,7 +474,7 @@ const analyze = function(
     prCheck = proofCheck(el, proof);
     bfCheck = bfieldCheck(el, bfield);
     teCheck = techCheck(el, tech);
-    feCheck = feachureCheck(el, feachure)
+    feCheck = feachureCheck(el, feachure);
 
     if (
       isMCheck &&
@@ -435,7 +496,7 @@ const analyze = function(
   return result;
 };
 
-const makeAlalyze = function() {
+const makeAlalyze = function () {
   let fitCoins;
 
   let isMineable = document.querySelector("#a-mineable").value;
@@ -473,34 +534,34 @@ const makeAlalyze = function() {
   drawTable(fitCoins);
 };
 
-const addEvListToBtn = function() {
+const addEvListToBtn = function () {
   let btn = document.querySelector("#a-btn");
   let btn_r = document.querySelector("#a-btn-reset");
 
-  btn.addEventListener("click", e => {
+  btn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     makeAlalyze();
   });
 
-  btn.addEventListener("submit", e => {
+  btn.addEventListener("submit", (e) => {
     e.preventDefault();
     e.stopPropagation();
   });
 
-  btn_r.addEventListener("click", e => {
+  btn_r.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     clearAll();
   });
 
-  btn_r.addEventListener("submit", e => {
+  btn_r.addEventListener("submit", (e) => {
     e.preventDefault();
     e.stopPropagation();
   });
 };
 
-const appINIT = function() {
+const appINIT = function () {
   footerToBottom();
   addEvListToBtn();
 };
