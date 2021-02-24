@@ -128,6 +128,11 @@ const drawTable = function (arr) {
             "https://bscscan.com/token/" + el.platform.token_address;
           break;
 
+        case "Binance Chain":
+          platformHREF =
+            "https://binance.mintscan.io/assets/" + el.platform.token_address;
+          break;
+
         case "TRON":
           platformHREF =
             "https://tronscan.org/#/token/" + el.platform.token_address;
@@ -154,6 +159,11 @@ const drawTable = function (arr) {
         case "Chiliz":
           platformHREF =
             "https://explorer.chiliz.com/tokens/" + el.platform.token_address;
+          break;
+
+        case "Solana":
+          platformHREF =
+            "https://explorer.solana.com/address/" + el.platform.token_address;
           break;
 
         default:
