@@ -125,12 +125,14 @@
                 <option value="Any Platform" selected>Any Platform</option>
                 <option value="None">None</option>
                 <option value="Ethereum">Ethereum</option>
-                <option value="Binance Coin">Binance Coin</option>
+                <option value="Binance Coin">Binance Smart Chain</option>
+                <option value="Binance Coin">Binance Chain</option>
                 <option value="TRON">TRON</option>
                 <option value="Neo">Neo</option>
+                <option value="Neo">Solana</option>
                 <option value="EOS">EOS</option>
-                <option value="IOST">IOST</option>
                 <option value="Chiliz">Chiliz</option>
+                <option value="IOST">Xdai chain</option>
               </select>
             </div>
           </div>
